@@ -1,0 +1,10 @@
+C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\bin\Debug\projeto-es.exe.config
+C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\bin\Debug\projeto-es.exe
+C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\bin\Debug\projeto-es.pdb
+C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto-es.csprojAssemblyReference.cache
+C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.CredentialsForm.resources
+C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Properties.Resources.resources
+C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto-es.csproj.GenerateResource.cache
+C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto-es.csproj.CoreCompileInputs.cache
+C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto-es.exe
+C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto-es.pdb

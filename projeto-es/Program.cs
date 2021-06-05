@@ -16,7 +16,7 @@ namespace projeto_es
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Sistema());
+            Application.Run(new CredentialsForm());
         }
     }
 }
