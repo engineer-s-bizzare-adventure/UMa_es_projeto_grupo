@@ -40,24 +40,27 @@ namespace projeto_es
             // welcomeLabel
             // 
             this.welcomeLabel.AutoSize = true;
-            this.welcomeLabel.Location = new System.Drawing.Point(70, 18);
+            this.welcomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeLabel.Location = new System.Drawing.Point(65, 9);
             this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(154, 13);
+            this.welcomeLabel.Size = new System.Drawing.Size(258, 20);
             this.welcomeLabel.TabIndex = 0;
             this.welcomeLabel.Text = "Bemvindo ao Sistema de Apoio";
             // 
             // loginRegisterLabel
             // 
             this.loginRegisterLabel.AutoSize = true;
-            this.loginRegisterLabel.Location = new System.Drawing.Point(88, 276);
+            this.loginRegisterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginRegisterLabel.Location = new System.Drawing.Point(120, 276);
             this.loginRegisterLabel.Name = "loginRegisterLabel";
-            this.loginRegisterLabel.Size = new System.Drawing.Size(119, 13);
+            this.loginRegisterLabel.Size = new System.Drawing.Size(143, 13);
             this.loginRegisterLabel.TabIndex = 1;
             this.loginRegisterLabel.Text = "Faça login ou registe-se";
+            this.loginRegisterLabel.Click += new System.EventHandler(this.loginRegisterLabel_Click);
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(113, 304);
+            this.loginButton.Location = new System.Drawing.Point(151, 304);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(75, 23);
             this.loginButton.TabIndex = 2;
@@ -67,7 +70,7 @@ namespace projeto_es
             // 
             // registerButton
             // 
-            this.registerButton.Location = new System.Drawing.Point(113, 333);
+            this.registerButton.Location = new System.Drawing.Point(151, 333);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(75, 23);
             this.registerButton.TabIndex = 3;
@@ -78,7 +81,7 @@ namespace projeto_es
             // credentialsPic
             // 
             this.credentialsPic.Image = global::projeto_es.Properties.Resources.pubbsk4oked41;
-            this.credentialsPic.Location = new System.Drawing.Point(50, 47);
+            this.credentialsPic.Location = new System.Drawing.Point(93, 48);
             this.credentialsPic.Name = "credentialsPic";
             this.credentialsPic.Size = new System.Drawing.Size(202, 211);
             this.credentialsPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -89,7 +92,7 @@ namespace projeto_es
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(305, 450);
+            this.ClientSize = new System.Drawing.Size(384, 391);
             this.Controls.Add(this.credentialsPic);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.loginButton);

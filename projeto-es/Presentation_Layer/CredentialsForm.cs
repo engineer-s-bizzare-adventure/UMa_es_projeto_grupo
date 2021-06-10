@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projeto_es.Presentation_Layer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace projeto_es
 {
@@ -21,14 +23,21 @@ namespace projeto_es
         {
             this.Hide();
             Form loginForm = new LoginForm();
-            loginForm.Show();
+            loginForm.ShowDialog();
+            this.Show();
         }
 
         private void registerButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form registerForm = new RegisterForm();
-            registerForm.Show();
+            registerForm.ShowDialog();
+            this.Show();
+        }
+
+        private void loginRegisterLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

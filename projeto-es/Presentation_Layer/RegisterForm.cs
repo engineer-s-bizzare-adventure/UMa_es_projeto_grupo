@@ -16,5 +16,25 @@ namespace projeto_es
         {
             InitializeComponent();
         }
+
+        private void emailTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void registerLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void registerButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

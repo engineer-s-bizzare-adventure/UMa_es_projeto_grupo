@@ -19,3 +19,5 @@ C:\Users\luisa\Documents\Universidade\Engenharia_Software\PROJETO\projeto-es\obj
 C:\Users\luisa\Documents\Universidade\Engenharia_Software\PROJETO\projeto-es\obj\Debug\projeto-es.exe
 C:\Users\luisa\Documents\Universidade\Engenharia_Software\PROJETO\projeto-es\obj\Debug\projeto-es.pdb
 C:\Users\luisa\Documents\Universidade\Engenharia_Software\PROJETO\projeto-es\obj\Debug\projeto_es.LoginForm.resources
+C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.LoginForm.resources
+C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.RegisterForm.resources
