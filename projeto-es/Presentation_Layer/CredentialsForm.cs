@@ -24,7 +24,6 @@ namespace projeto_es
             this.Hide();
             Form loginForm = new LoginForm();
             loginForm.ShowDialog();
-            this.Show();
         }
 
         private void registerButton_Click(object sender, EventArgs e)
@@ -32,10 +31,14 @@ namespace projeto_es
             this.Hide();
             Form registerForm = new RegisterForm();
             registerForm.ShowDialog();
-            this.Show();
         }
 
         private void loginRegisterLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CredentialsForm_Load(object sender, EventArgs e)
         {
 
         }

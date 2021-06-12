@@ -43,9 +43,9 @@ namespace projeto_es
             this.welcomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.welcomeLabel.Location = new System.Drawing.Point(65, 9);
             this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(258, 20);
+            this.welcomeLabel.Size = new System.Drawing.Size(264, 20);
             this.welcomeLabel.TabIndex = 0;
-            this.welcomeLabel.Text = "Bemvindo ao Sistema de Apoio";
+            this.welcomeLabel.Text = "Bem-vindo ao Sistema de Apoio";
             // 
             // loginRegisterLabel
             // 
@@ -100,6 +100,7 @@ namespace projeto_es
             this.Controls.Add(this.welcomeLabel);
             this.Name = "CredentialsForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.CredentialsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.credentialsPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -34,6 +34,11 @@ namespace projeto_es
 
         private void backButton_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.OK;
+        }
+
+        private void RegisterForm_Load(object sender, EventArgs e)
+        {
 
         }
     }

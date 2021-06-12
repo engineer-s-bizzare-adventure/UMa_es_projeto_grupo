@@ -21,3 +21,16 @@ C:\Users\luisa\Documents\Universidade\Engenharia_Software\PROJETO\projeto-es\obj
 C:\Users\luisa\Documents\Universidade\Engenharia_Software\PROJETO\projeto-es\obj\Debug\projeto_es.LoginForm.resources
 C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.LoginForm.resources
 C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.RegisterForm.resources
+C:\Users\pedro\OneDrive\Documentos\GitHub\UMa_es_projeto_grupo\projeto-es\bin\Debug\projeto-es.exe.config
+C:\Users\pedro\OneDrive\Documentos\GitHub\UMa_es_projeto_grupo\projeto-es\bin\Debug\projeto-es.exe
+C:\Users\pedro\OneDrive\Documentos\GitHub\UMa_es_projeto_grupo\projeto-es\bin\Debug\projeto-es.pdb
+C:\Users\pedro\OneDrive\Documentos\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto-es.csprojAssemblyReference.cache
+C:\Users\pedro\OneDrive\Documentos\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.CredentialsForm.resources
+C:\Users\pedro\OneDrive\Documentos\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.LoginForm.resources
+C:\Users\pedro\OneDrive\Documentos\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.MainMenuStaff.resources
+C:\Users\pedro\OneDrive\Documentos\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.RegisterForm.resources
+C:\Users\pedro\OneDrive\Documentos\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Properties.Resources.resources
+C:\Users\pedro\OneDrive\Documentos\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto-es.csproj.GenerateResource.cache
+C:\Users\pedro\OneDrive\Documentos\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto-es.csproj.CoreCompileInputs.cache
+C:\Users\pedro\OneDrive\Documentos\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto-es.exe
+C:\Users\pedro\OneDrive\Documentos\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto-es.pdb

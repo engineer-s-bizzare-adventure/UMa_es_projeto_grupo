@@ -35,6 +35,7 @@ namespace projeto_es.Presentation_Layer
             this.passwordLabel = new System.Windows.Forms.Label();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.label_wrong = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // backButton
@@ -79,10 +80,12 @@ namespace projeto_es.Presentation_Layer
             // 
             // passwordTextBox
             // 
+            this.passwordTextBox.AllowDrop = true;
             this.passwordTextBox.Location = new System.Drawing.Point(12, 90);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(460, 20);
             this.passwordTextBox.TabIndex = 4;
+            this.passwordTextBox.UseSystemPasswordChar = true;
             // 
             // emailTextBox
             // 
@@ -91,11 +94,21 @@ namespace projeto_es.Presentation_Layer
             this.emailTextBox.Size = new System.Drawing.Size(460, 20);
             this.emailTextBox.TabIndex = 5;
             // 
+            // label_wrong
+            // 
+            this.label_wrong.AutoSize = true;
+            this.label_wrong.Location = new System.Drawing.Point(24, 129);
+            this.label_wrong.Name = "label_wrong";
+            this.label_wrong.Size = new System.Drawing.Size(35, 13);
+            this.label_wrong.TabIndex = 6;
+            this.label_wrong.Text = "label1";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 161);
+            this.Controls.Add(this.label_wrong);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.passwordLabel);
@@ -118,5 +131,6 @@ namespace projeto_es.Presentation_Layer
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.Label label_wrong;
     }
 }
