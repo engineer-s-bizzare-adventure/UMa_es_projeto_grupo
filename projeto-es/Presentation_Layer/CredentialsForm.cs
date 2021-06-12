@@ -39,5 +39,10 @@ namespace projeto_es
         {
 
         }
+
+        private void CredentialsForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

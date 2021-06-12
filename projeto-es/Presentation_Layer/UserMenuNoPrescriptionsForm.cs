@@ -10,39 +10,21 @@ using System.Windows.Forms;
 
 namespace projeto_es.Presentation_Layer
 {
-    public partial class LoginForm : Form
+    public partial class UserMenuNoPrescriptionsForm : Form
     {
-        public LoginForm()
+        public UserMenuNoPrescriptionsForm()
         {
             InitializeComponent();
         }
 
-        private void LoginButton_Click(object sender, EventArgs e)
+        private void okButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form userMenuForm = new UserMenuForm();
-            userMenuForm.ShowDialog();
             this.DialogResult = DialogResult.OK;
-        }
-
-        private void emailLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void passwordLabel_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

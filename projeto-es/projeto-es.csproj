@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presentation_Layer\UserMenuCheckPrescriptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\UserMenuCheckPrescriptionForm.Designer.cs">
+      <DependentUpon>UserMenuCheckPrescriptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\UserMenuCreateAppointmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\UserMenuCreateAppointmentForm.Designer.cs">
+      <DependentUpon>UserMenuCreateAppointmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\UserMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\UserMenuForm.Designer.cs">
+      <DependentUpon>UserMenuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation_Layer\CredentialsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +76,36 @@
     <Compile Include="Presentation_Layer\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation_Layer\UserMenuAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\UserMenuAccountForm.Designer.cs">
+      <DependentUpon>UserMenuAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\UserMenuNoAppointmentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\UserMenuNoAppointmentsForm.Designer.cs">
+      <DependentUpon>UserMenuNoAppointmentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\UserMenuNoPrescriptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\UserMenuNoPrescriptionsForm.Designer.cs">
+      <DependentUpon>UserMenuNoPrescriptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\UserMenuAppointmentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\UserMenuAppointmentsForm.Designer.cs">
+      <DependentUpon>UserMenuAppointmentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\UserMenuPrescriptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\UserMenuPrescriptionsForm.Designer.cs">
+      <DependentUpon>UserMenuPrescriptionsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Presentation_Layer\RegisterForm.cs">
@@ -66,6 +114,15 @@
     <Compile Include="Presentation_Layer\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Presentation_Layer\UserMenuCheckPrescriptionForm.resx">
+      <DependentUpon>UserMenuCheckPrescriptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\UserMenuCreateAppointmentForm.resx">
+      <DependentUpon>UserMenuCreateAppointmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\UserMenuForm.resx">
+      <DependentUpon>UserMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation_Layer\CredentialsForm.resx">
       <DependentUpon>CredentialsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -74,6 +131,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation_Layer\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\UserMenuAccountForm.resx">
+      <DependentUpon>UserMenuAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\UserMenuNoAppointmentsForm.resx">
+      <DependentUpon>UserMenuNoAppointmentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\UserMenuNoPrescriptionsForm.resx">
+      <DependentUpon>UserMenuNoPrescriptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\UserMenuAppointmentsForm.resx">
+      <DependentUpon>UserMenuAppointmentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\UserMenuPrescriptionsForm.resx">
+      <DependentUpon>UserMenuPrescriptionsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
