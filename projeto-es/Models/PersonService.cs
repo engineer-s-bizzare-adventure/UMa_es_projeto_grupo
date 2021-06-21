@@ -22,16 +22,5 @@ namespace projeto_es.Models
             string sql = $"INSERT INTO person(name, age, address) VALUES ('{person.name}', {person.age}, '{person.address}')";
             this._conn.Execute(sql);
         }
-
-        //public int GetLastPersonId()
-        //{
-        //    var SqlLastID = "SELECT id FROM person ORDER BY id DESC LIMIT 1";
-        //    return this._conn.Execute(SqlLastID);
-        //}
-        //public void InsertPerson(string name, int age, string address)
-        //{
-        //    string sql = $"INSERT INTO person(name, age, address) VALUES ('{name}', {age}, '{address}')";
-        //    this._conn.Execute(sql);          
-        //}
     }
 }

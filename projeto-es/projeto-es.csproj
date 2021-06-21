@@ -103,6 +103,7 @@
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\PersonService.cs" />
     <Compile Include="Models\Prescription.cs" />
+    <Compile Include="Models\Session.cs" />
     <Compile Include="Models\StaffAccount.cs" />
     <Compile Include="Presentation_Layer\UserMenuCheckPrescriptionForm.cs">
       <SubType>Form</SubType>

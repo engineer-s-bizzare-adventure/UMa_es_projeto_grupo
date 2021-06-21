@@ -21,16 +21,19 @@ namespace projeto_es.Presentation_Layer
         private void LoginButton_Click(object sender, EventArgs e)
         {
             AccountService accountService = new AccountService();
-            var loggedAccount = accountService.CheckLogin(emailTextBox.Text, passwordTextBox.Text);
+            Account account = accountService.FetchAccount(emailTextBox.Text, passwordTextBox.Text);
 
-            if (loggedAccount == null)
+            if (account == null)
             {
                 MessageBox.Show("Error logging in! Check details.");
                 return;
             }
 
+            Person PersonAssociatedToAccount = accountService.GetUserDataFromAccount(account.Email);
+            Session accountSession = new Session(account, PersonAssociatedToAccount);
+
             this.Hide();
-            Form userMenuForm = new UserMenuForm(loggedAccount);
+            Form userMenuForm = new UserMenuForm(accountSession);
             userMenuForm.ShowDialog();
             this.DialogResult = DialogResult.OK;
         }
