@@ -71,9 +71,9 @@ namespace projeto_es.Presentation_Layer
             this.welcomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.welcomeLabel.Location = new System.Drawing.Point(13, 13);
             this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(192, 25);
+            this.welcomeLabel.Size = new System.Drawing.Size(107, 25);
             this.welcomeLabel.TabIndex = 3;
-            this.welcomeLabel.Text = "Seja bem vindo(a) ";
+            this.welcomeLabel.Text = "Welcome ";
             this.welcomeLabel.Click += new System.EventHandler(this.welcomeLabel_Click);
             // 
             // UserMenuForm
