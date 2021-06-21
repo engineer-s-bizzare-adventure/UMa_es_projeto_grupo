@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projeto_es.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,8 @@ namespace projeto_es.Presentation_Layer
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-
+            AccountService newRegisteredAccount = new AccountService();
+            newRegisteredAccount.LoginAccount(emailTextBox.Text, passwordTextBox.Text);
         }
 
         private void emailLabel_Click(object sender, EventArgs e)
@@ -38,6 +40,11 @@ namespace projeto_es.Presentation_Layer
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void emailTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }

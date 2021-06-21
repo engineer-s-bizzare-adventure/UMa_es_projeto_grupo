@@ -90,6 +90,7 @@ namespace projeto_es.Presentation_Layer
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(460, 20);
             this.emailTextBox.TabIndex = 5;
+            this.emailTextBox.TextChanged += new System.EventHandler(this.emailTextBox_TextChanged);
             // 
             // LoginForm
             // 
