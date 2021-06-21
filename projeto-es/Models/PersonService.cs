@@ -19,8 +19,14 @@ namespace projeto_es.Models
         }
         public void InsertPerson(Person person)
         {
-            string sql = "INSERT INTO person(id, name, age, address) VALUES (null,'@name', @age, '@address')";
+            string sql = $"INSERT INTO person(id, name, age, address) VALUES ('{person.name}', {person.age}, '{person.address}')";
             this._conn.Execute(sql);
+        }
+
+        public int GetLastPersonId()
+        {
+            string SqlLastID = "SELECT LAST_INSERT_ID();";
+            return this._conn.Execute(SqlLastID);
         }
         //public void InsertPerson(string name, int age, string address)
         //{

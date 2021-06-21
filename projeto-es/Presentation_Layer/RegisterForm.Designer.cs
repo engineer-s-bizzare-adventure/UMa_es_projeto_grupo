@@ -104,6 +104,7 @@ namespace projeto_es
             this.Controls.Add(this.emailTextBox);
             this.Name = "RegisterForm";
             this.Text = "RegisterForm";
+            this.Load += new System.EventHandler(this.RegisterForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

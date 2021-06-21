@@ -31,15 +31,27 @@ namespace projeto_es
 
         private void registerButton_Click(object sender, EventArgs e)
         {
+            PersonService NewPerson = new PersonService();
             AccountService newRegisteredAccount = new AccountService();
+            NewPerson.InsertPerson(new Person()
+            {
+                //name e isso
+            });
+            int IdPessoa = NewPerson.GetLastPersonId();
             newRegisteredAccount.CreateAccount(new Account()
             {
                 Email = emailTextBox.Text,
                 Password = passwordTextBox.Text,
-            }); ;
+                PersonId = IdPessoa,
+            }); 
         }
 
         private void backButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RegisterForm_Load(object sender, EventArgs e)
         {
 
         }
