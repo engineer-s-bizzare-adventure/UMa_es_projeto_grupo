@@ -32,11 +32,12 @@ namespace projeto_es.Presentation_Layer
             this.accountButton = new System.Windows.Forms.Button();
             this.appointmentsButton = new System.Windows.Forms.Button();
             this.prescriptionsButton = new System.Windows.Forms.Button();
+            this.welcomeLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // accountButton
             // 
-            this.accountButton.Location = new System.Drawing.Point(713, 12);
+            this.accountButton.Location = new System.Drawing.Point(259, 118);
             this.accountButton.Name = "accountButton";
             this.accountButton.Size = new System.Drawing.Size(75, 23);
             this.accountButton.TabIndex = 0;
@@ -46,7 +47,7 @@ namespace projeto_es.Presentation_Layer
             // 
             // appointmentsButton
             // 
-            this.appointmentsButton.Location = new System.Drawing.Point(97, 341);
+            this.appointmentsButton.Location = new System.Drawing.Point(12, 118);
             this.appointmentsButton.Name = "appointmentsButton";
             this.appointmentsButton.Size = new System.Drawing.Size(207, 23);
             this.appointmentsButton.TabIndex = 1;
@@ -56,7 +57,7 @@ namespace projeto_es.Presentation_Layer
             // 
             // prescriptionsButton
             // 
-            this.prescriptionsButton.Location = new System.Drawing.Point(488, 341);
+            this.prescriptionsButton.Location = new System.Drawing.Point(12, 147);
             this.prescriptionsButton.Name = "prescriptionsButton";
             this.prescriptionsButton.Size = new System.Drawing.Size(207, 23);
             this.prescriptionsButton.TabIndex = 2;
@@ -64,11 +65,23 @@ namespace projeto_es.Presentation_Layer
             this.prescriptionsButton.UseVisualStyleBackColor = true;
             this.prescriptionsButton.Click += new System.EventHandler(this.prescriptionsButton_Click);
             // 
+            // welcomeLabel
+            // 
+            this.welcomeLabel.AutoSize = true;
+            this.welcomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeLabel.Location = new System.Drawing.Point(13, 13);
+            this.welcomeLabel.Name = "welcomeLabel";
+            this.welcomeLabel.Size = new System.Drawing.Size(192, 25);
+            this.welcomeLabel.TabIndex = 3;
+            this.welcomeLabel.Text = "Seja bem vindo(a) ";
+            this.welcomeLabel.Click += new System.EventHandler(this.welcomeLabel_Click);
+            // 
             // UserMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(496, 335);
+            this.Controls.Add(this.welcomeLabel);
             this.Controls.Add(this.prescriptionsButton);
             this.Controls.Add(this.appointmentsButton);
             this.Controls.Add(this.accountButton);
@@ -76,6 +89,7 @@ namespace projeto_es.Presentation_Layer
             this.Text = "ClientMenuForm";
             this.Load += new System.EventHandler(this.UserMenuForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -84,5 +98,6 @@ namespace projeto_es.Presentation_Layer
         private System.Windows.Forms.Button accountButton;
         private System.Windows.Forms.Button appointmentsButton;
         private System.Windows.Forms.Button prescriptionsButton;
+        private System.Windows.Forms.Label welcomeLabel;
     }
 }

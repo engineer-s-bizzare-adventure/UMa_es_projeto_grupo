@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using projeto_es.Models;
+using System;
 using System.Windows.Forms;
 
 namespace projeto_es.Presentation_Layer
@@ -13,11 +7,13 @@ namespace projeto_es.Presentation_Layer
     public partial class UserMenuForm : Form
     {
 
-        public UserMenuForm()
+        public UserMenuForm(Account loggedSession)
         {
             InitializeComponent();
+            LoggedSession = loggedSession;
         }
 
+        public Account LoggedSession {get; set;}
         private void accountButton_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -36,7 +32,7 @@ namespace projeto_es.Presentation_Layer
 
         private void UserMenuForm_Load(object sender, EventArgs e)
         {
-
+            welcomeLabel.Text = "Seja muito bem vindo(a), " + LoggedSession.Email;
         }
 
         private void appointmentsButton_Click(object sender, EventArgs e)
@@ -55,6 +51,11 @@ namespace projeto_es.Presentation_Layer
             Form userPrescriptionForm = new UserMenuPrescriptionsForm();
             userPrescriptionForm.ShowDialog();
             this.Show();
+        }
+
+        private void welcomeLabel_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

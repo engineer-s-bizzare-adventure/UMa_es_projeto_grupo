@@ -30,5 +30,10 @@ namespace projeto_es.Presentation_Layer
             userCreateAppointmentForm.ShowDialog();
             this.Close();
         }
+
+        private void appointmentsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
