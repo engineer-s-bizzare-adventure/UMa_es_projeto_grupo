@@ -33,6 +33,8 @@ namespace projeto_es
         {
             PersonService NewPerson = new PersonService();
             AccountService newRegisteredAccount = new AccountService();
+            ClientAccountService NewClientAccountService = new ClientAccountService();
+
             NewPerson.InsertPerson(new Person()
             {
                 name = accountName.Text,
@@ -43,7 +45,8 @@ namespace projeto_es
             {
                 Email = emailTextBox.Text,
                 Password = passwordTextBox.Text,
-            }); 
+            });
+            NewClientAccountService.CreateClientAccount(new ClientAccount());
         }
 
         private void backButton_Click(object sender, EventArgs e)
