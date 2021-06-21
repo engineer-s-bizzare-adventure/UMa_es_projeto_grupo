@@ -47,6 +47,7 @@ namespace projeto_es
                 Password = passwordTextBox.Text,
             });
             NewClientAccountService.CreateClientAccount(new ClientAccount());
+            this.DialogResult = DialogResult.OK;
         }
 
         private void backButton_Click(object sender, EventArgs e)
