@@ -97,6 +97,7 @@
     <Compile Include="Models\AccountService.cs" />
     <Compile Include="Models\AdminAccount.cs" />
     <Compile Include="Models\Appointment.cs" />
+    <Compile Include="Models\AppointmentService.cs" />
     <Compile Include="Models\ClientAccount.cs" />
     <Compile Include="Models\ClientAccountService.cs" />
     <Compile Include="Models\Item.cs" />
