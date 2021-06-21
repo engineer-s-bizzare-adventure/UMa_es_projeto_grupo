@@ -17,21 +17,15 @@ namespace projeto_es.Models
         {
             _conn = new MySqlConnection(_connectionString);
         }
-
-        public void InsertPerson()
+        public void InsertPerson(Person person)
         {
-            string sql = "INSERT INTO person(name, age, address) VALUES ('Joao', 12, 'Rua das pretas')";
+            string sql = "INSERT INTO person(id, name, age, address) VALUES (null,'@name', @age, '@address')";
             this._conn.Execute(sql);
-
-            //_conn.Open();
-            //var cmd = new MySqlCommand();
-            //cmd.Connection = _conn;
-            //cmd.CommandText = sql;
-            //cmd.Prepare();
-
-            //cmd.ExecuteNonQuery();
-            //_conn.Close();
-            
         }
+        //public void InsertPerson(string name, int age, string address)
+        //{
+        //    string sql = $"INSERT INTO person(name, age, address) VALUES ('{name}', {age}, '{address}')";
+        //    this._conn.Execute(sql);          
+        //}
     }
 }
