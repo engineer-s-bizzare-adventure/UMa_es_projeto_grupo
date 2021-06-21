@@ -55,6 +55,7 @@ namespace projeto_es.Presentation_Layer
             this.appointmentsListBox.Name = "appointmentsListBox";
             this.appointmentsListBox.Size = new System.Drawing.Size(377, 186);
             this.appointmentsListBox.TabIndex = 6;
+            this.appointmentsListBox.SelectedIndexChanged += new System.EventHandler(this.appointmentsListBox_SelectedIndexChanged);
             // 
             // checkPrescriptionButton
             // 

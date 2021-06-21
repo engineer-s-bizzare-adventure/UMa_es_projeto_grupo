@@ -23,29 +23,12 @@ namespace projeto_es.Models
             string sql = $"INSERT INTO `account`(`email`, `password`, `Person_id`) VALUES ('{account.Email}', '{account.Password}', LAST_INSERT_ID())";
             this._conn.Execute(sql);
         }
-        public void LoginAccount(String email, String password)
+        public Account CheckLogin(string email, string password)
         {
-            string QueryLogIN = $"SELECT `email`, `password` FROM `account` WHERE account.email ='{email}'";
-            var teste = this._conn.Query<Account>(QueryLogIN).ToList();
-            if(teste.Count != 0)
-            {
-                foreach (var account in teste)
-                {
-                    if(account.Email == email && account.Password == password)
-                    {
-                        Console.WriteLine("Sucess :-D, congrats");
-                    }
-                    else
-                    {
-                        Console.WriteLine("wronng password my dude");
-                    }
-                }
-            }
-            else
-            {
-                Console.WriteLine("wroong account name or password :-(");
-            }
+            string QueryLogIN = $"SELECT `email`, `password` FROM `account` WHERE account.email ='{email}' AND account.password = '{password}'";
+            var account = this._conn.Query<Account>(QueryLogIN).FirstOrDefault();
 
+            return account;
         }
     }
 }

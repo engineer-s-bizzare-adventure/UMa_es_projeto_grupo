@@ -38,7 +38,7 @@ namespace projeto_es.Presentation_Layer
             // 
             this.noPrecriptionsLabel.AutoSize = true;
             this.noPrecriptionsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noPrecriptionsLabel.Location = new System.Drawing.Point(148, 60);
+            this.noPrecriptionsLabel.Location = new System.Drawing.Point(158, 60);
             this.noPrecriptionsLabel.Name = "noPrecriptionsLabel";
             this.noPrecriptionsLabel.Size = new System.Drawing.Size(486, 31);
             this.noPrecriptionsLabel.TabIndex = 1;
@@ -56,7 +56,7 @@ namespace projeto_es.Presentation_Layer
             // 
             // okButton
             // 
-            this.okButton.Location = new System.Drawing.Point(303, 214);
+            this.okButton.Location = new System.Drawing.Point(309, 129);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(195, 23);
             this.okButton.TabIndex = 4;

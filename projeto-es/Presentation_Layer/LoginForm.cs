@@ -20,10 +20,17 @@ namespace projeto_es.Presentation_Layer
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            AccountService newRegisteredAccount = new AccountService();
-            newRegisteredAccount.LoginAccount(emailTextBox.Text, passwordTextBox.Text);
+            AccountService accountService = new AccountService();
+            var loggedAccount = accountService.CheckLogin(emailTextBox.Text, passwordTextBox.Text);
+
+            if (loggedAccount == null)
+            {
+                MessageBox.Show("Error logging in! Check details.");
+                return;
+            }
+
             this.Hide();
-            Form userMenuForm = new UserMenuForm();
+            Form userMenuForm = new UserMenuForm(loggedAccount);
             userMenuForm.ShowDialog();
             this.DialogResult = DialogResult.OK;
         }
