@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projeto_es.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,6 +15,8 @@ namespace projeto_es
         [STAThread]
         static void Main()
         {
+            PersonService personService = new PersonService();
+            personService.InsertPerson();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new CredentialsForm());
