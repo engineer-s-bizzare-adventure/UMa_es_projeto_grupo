@@ -95,3 +95,11 @@ C:\Users\Asus\Source\Repos\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto-es.
 C:\Users\Asus\Source\Repos\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto-es.csproj.CopyComplete
 C:\Users\Asus\Source\Repos\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto-es.exe
 C:\Users\Asus\Source\Repos\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto-es.pdb
+C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.UserMenuCreateAppointmentForm.resources
+C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.UserMenuForm.resources
+C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.UserMenuAccountForm.resources
+C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.UserMenuNoAppointmentsForm.resources
+C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.UserMenuNoPrescriptionsForm.resources
+C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.UserMenuAppointmentsForm.resources
+C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.UserMenuPrescriptionsForm.resources
+C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.UserMenuCheckPrescriptionForm.resources

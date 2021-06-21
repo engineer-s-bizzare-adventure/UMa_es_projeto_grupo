@@ -22,6 +22,10 @@ namespace projeto_es.Presentation_Layer
         {
             AccountService newRegisteredAccount = new AccountService();
             newRegisteredAccount.LoginAccount(emailTextBox.Text, passwordTextBox.Text);
+            this.Hide();
+            Form userMenuForm = new UserMenuForm();
+            userMenuForm.ShowDialog();
+            this.DialogResult = DialogResult.OK;
         }
 
         private void emailLabel_Click(object sender, EventArgs e)

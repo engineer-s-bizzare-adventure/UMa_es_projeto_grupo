@@ -99,7 +99,8 @@ namespace projeto_es
             this.Controls.Add(this.loginRegisterLabel);
             this.Controls.Add(this.welcomeLabel);
             this.Name = "CredentialsForm";
-            this.Text = "Form1";
+            this.Text = "System ";
+            this.Load += new System.EventHandler(this.CredentialsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.credentialsPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

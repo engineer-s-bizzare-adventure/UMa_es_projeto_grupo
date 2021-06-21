@@ -83,6 +83,7 @@ namespace projeto_es.Presentation_Layer
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(460, 20);
             this.passwordTextBox.TabIndex = 4;
+            this.passwordTextBox.UseSystemPasswordChar = true;
             // 
             // emailTextBox
             // 
