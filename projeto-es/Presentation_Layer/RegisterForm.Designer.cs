@@ -35,6 +35,12 @@ namespace projeto_es
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.registerButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
+            this.accountName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.accountAddress = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.accountAge = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // emailTextBox
@@ -73,7 +79,7 @@ namespace projeto_es
             // 
             // registerButton
             // 
-            this.registerButton.Location = new System.Drawing.Point(397, 116);
+            this.registerButton.Location = new System.Drawing.Point(396, 233);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(75, 23);
             this.registerButton.TabIndex = 4;
@@ -91,11 +97,70 @@ namespace projeto_es
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
+            // accountName
+            // 
+            this.accountName.Location = new System.Drawing.Point(12, 129);
+            this.accountName.Name = "accountName";
+            this.accountName.Size = new System.Drawing.Size(459, 20);
+            this.accountName.TabIndex = 6;
+            this.accountName.TextChanged += new System.EventHandler(this.accountName_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 113);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Name";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 152);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(26, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Age";
+            // 
+            // accountAddress
+            // 
+            this.accountAddress.Location = new System.Drawing.Point(12, 207);
+            this.accountAddress.Name = "accountAddress";
+            this.accountAddress.Size = new System.Drawing.Size(459, 20);
+            this.accountAddress.TabIndex = 10;
+            this.accountAddress.TextChanged += new System.EventHandler(this.accountAddress_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 191);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Address";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // accountAge
+            // 
+            this.accountAge.Location = new System.Drawing.Point(12, 168);
+            this.accountAge.Name = "accountAge";
+            this.accountAge.Size = new System.Drawing.Size(49, 20);
+            this.accountAge.TabIndex = 7;
+            this.accountAge.TextChanged += new System.EventHandler(this.accountAge_TextChanged);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 161);
+            this.ClientSize = new System.Drawing.Size(484, 264);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.accountAddress);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.accountAge);
+            this.Controls.Add(this.accountName);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.passwordTextBox);
@@ -104,6 +169,7 @@ namespace projeto_es
             this.Controls.Add(this.emailTextBox);
             this.Name = "RegisterForm";
             this.Text = "RegisterForm";
+            this.Load += new System.EventHandler(this.RegisterForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,5 +183,11 @@ namespace projeto_es
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Button registerButton;
         private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.TextBox accountName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox accountAddress;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox accountAge;
     }
 }

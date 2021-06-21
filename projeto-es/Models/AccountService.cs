@@ -20,7 +20,7 @@ namespace projeto_es.Models
 
         public void CreateAccount(Account account)
         {
-            string sql = $"INSERT INTO `account`(`email`, `password`, `Person_id`) VALUES ('{account.Email}', '{account.Password}', 1)";
+            string sql = $"INSERT INTO `account`(`email`, `password`, `Person_id`) VALUES ('{account.Email}', '{account.Password}', LAST_INSERT_ID())";
             this._conn.Execute(sql);
         }
     }
