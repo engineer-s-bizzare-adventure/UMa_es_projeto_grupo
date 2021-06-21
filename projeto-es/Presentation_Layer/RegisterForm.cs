@@ -35,14 +35,14 @@ namespace projeto_es
             AccountService newRegisteredAccount = new AccountService();
             NewPerson.InsertPerson(new Person()
             {
-                //name e isso
+                name = accountName.Text,
+                age = Int16.Parse(accountAge.Text),
+                address = accountAddress.Text,
             });
-            int IdPessoa = NewPerson.GetLastPersonId();
             newRegisteredAccount.CreateAccount(new Account()
             {
                 Email = emailTextBox.Text,
                 Password = passwordTextBox.Text,
-                PersonId = IdPessoa,
             }); 
         }
 
@@ -52,6 +52,31 @@ namespace projeto_es
         }
 
         private void RegisterForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accountName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accountAddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accountAge_TextChanged(object sender, EventArgs e)
         {
 
         }
