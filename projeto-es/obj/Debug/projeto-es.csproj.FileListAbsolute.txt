@@ -111,3 +111,4 @@ C:\Users\luisa\Documents\Universidade\Engenharia_Software\UMa_es_projeto_grupo\p
 C:\Users\luisa\Documents\Universidade\Engenharia_Software\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.UserMenuNoPrescriptionsForm.resources
 C:\Users\luisa\Documents\Universidade\Engenharia_Software\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.UserMenuAppointmentsForm.resources
 C:\Users\luisa\Documents\Universidade\Engenharia_Software\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.UserMenuPrescriptionsForm.resources
+C:\Users\luisa\Documents\Universidade\Engenharia_Software\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.AdminForm.resources

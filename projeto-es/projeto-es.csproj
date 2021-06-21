@@ -92,19 +92,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business_Layer\ItemService.cs" />
     <Compile Include="DbContext.cs" />
     <Compile Include="Models\Account.cs" />
-    <Compile Include="Models\AccountService.cs" />
+    <Compile Include="Business_Layer\AccountService.cs" />
     <Compile Include="Models\AdminAccount.cs" />
     <Compile Include="Models\Appointment.cs" />
     <Compile Include="Models\ClientAccount.cs" />
-    <Compile Include="Models\ClientAccountService.cs" />
+    <Compile Include="Business_Layer\ClientAccountService.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\Person.cs" />
-    <Compile Include="Models\PersonService.cs" />
+    <Compile Include="Business_Layer\PersonService.cs" />
     <Compile Include="Models\Prescription.cs" />
     <Compile Include="Models\Session.cs" />
     <Compile Include="Models\StaffAccount.cs" />
+    <Compile Include="Presentation_Layer\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation_Layer\UserMenuCheckPrescriptionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +180,9 @@
     <Compile Include="Presentation_Layer\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Presentation_Layer\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation_Layer\UserMenuCheckPrescriptionForm.resx">
       <DependentUpon>UserMenuCheckPrescriptionForm.cs</DependentUpon>
     </EmbeddedResource>

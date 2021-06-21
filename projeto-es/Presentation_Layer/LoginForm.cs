@@ -1,12 +1,5 @@
 ﻿using projeto_es.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace projeto_es.Presentation_Layer
@@ -29,8 +22,8 @@ namespace projeto_es.Presentation_Layer
                 return;
             }
 
-            Person PersonAssociatedToAccount = accountService.GetUserDataFromAccount(account.Email);
-            Session accountSession = new Session(account, PersonAssociatedToAccount);
+            Person personAssociatedToAccount = accountService.GetUserDataFromAccount(account.Email);
+            Session accountSession = new Session(account, personAssociatedToAccount);
 
             this.Hide();
             Form userMenuForm = new UserMenuForm(accountSession);
