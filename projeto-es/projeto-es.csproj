@@ -93,8 +93,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DbContext.cs" />
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\AccountService.cs" />
+    <Compile Include="Models\AdminAccount.cs" />
+    <Compile Include="Models\Appointment.cs" />
+    <Compile Include="Models\ClientAccount.cs" />
+    <Compile Include="Models\Item.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\PersonService.cs" />
+    <Compile Include="Models\Prescription.cs" />
+    <Compile Include="Models\StaffAccount.cs" />
     <Compile Include="Presentation_Layer\CredentialsForm.cs">
       <SubType>Form</SubType>
     </Compile>

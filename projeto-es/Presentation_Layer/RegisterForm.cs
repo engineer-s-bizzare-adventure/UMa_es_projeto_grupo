@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using projeto_es.Models;
 
 namespace projeto_es
 {
     public partial class RegisterForm : Form
     {
+        AccountService accountService = new AccountService();
         public RegisterForm()
         {
             InitializeComponent();
@@ -29,7 +31,12 @@ namespace projeto_es
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-
+            AccountService newRegisteredAccount = new AccountService();
+            newRegisteredAccount.CreateAccount(new Account()
+            {
+                Email = emailTextBox.Text,
+                Password = passwordTextBox.Text,
+            }); ;
         }
 
         private void backButton_Click(object sender, EventArgs e)
