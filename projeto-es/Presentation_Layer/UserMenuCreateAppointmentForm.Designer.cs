@@ -36,39 +36,38 @@ namespace projeto_es.Presentation_Layer
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.backButton = new System.Windows.Forms.Button();
             this.selectHourLabel = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.descriptionRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.addDescriptionRichBox = new System.Windows.Forms.Label();
+            this.hourDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // staffListBox
             // 
             this.staffListBox.FormattingEnabled = true;
-            this.staffListBox.Items.AddRange(new object[] {
-            "Dr. Joao",
-            "Dr. Alberto",
-            "Dr. Milos",
-            "Dr. Scuff"});
             this.staffListBox.Location = new System.Drawing.Point(183, 65);
             this.staffListBox.Name = "staffListBox";
             this.staffListBox.Size = new System.Drawing.Size(413, 82);
             this.staffListBox.TabIndex = 0;
+            this.staffListBox.SelectedIndexChanged += new System.EventHandler(this.staffListBox_SelectedIndexChanged);
             // 
             // selectDoctorLabel
             // 
             this.selectDoctorLabel.AutoSize = true;
             this.selectDoctorLabel.Location = new System.Drawing.Point(180, 49);
             this.selectDoctorLabel.Name = "selectDoctorLabel";
-            this.selectDoctorLabel.Size = new System.Drawing.Size(175, 13);
+            this.selectDoctorLabel.Size = new System.Drawing.Size(178, 13);
             this.selectDoctorLabel.TabIndex = 1;
-            this.selectDoctorLabel.Text = "Select a doctor for you appointment";
+            this.selectDoctorLabel.Text = "Select a doctor for your appointment";
             // 
             // selectCalendarLabel
             // 
             this.selectCalendarLabel.AutoSize = true;
             this.selectCalendarLabel.Location = new System.Drawing.Point(180, 163);
             this.selectCalendarLabel.Name = "selectCalendarLabel";
-            this.selectCalendarLabel.Size = new System.Drawing.Size(162, 13);
+            this.selectCalendarLabel.Size = new System.Drawing.Size(165, 13);
             this.selectCalendarLabel.TabIndex = 3;
-            this.selectCalendarLabel.Text = "Select a day for you appointment";
+            this.selectCalendarLabel.Text = "Select a day for your appointment";
+            this.selectCalendarLabel.Click += new System.EventHandler(this.selectCalendarLabel_Click);
             // 
             // createAppointmentButton
             // 
@@ -82,10 +81,12 @@ namespace projeto_es.Presentation_Layer
             // 
             // dateTimePicker
             // 
+            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker.Location = new System.Drawing.Point(183, 179);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(225, 20);
             this.dateTimePicker.TabIndex = 5;
+            this.dateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker_ValueChanged);
             // 
             // backButton
             // 
@@ -106,25 +107,41 @@ namespace projeto_es.Presentation_Layer
             this.selectHourLabel.TabIndex = 7;
             this.selectHourLabel.Text = "Select and hour for your appointment";
             // 
-            // comboBox1
+            // descriptionRichTextBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "9:00",
-            "10:00",
-            "11:00",
-            "12:00"});
-            this.comboBox1.Location = new System.Drawing.Point(183, 251);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 8;
+            this.descriptionRichTextBox.Location = new System.Drawing.Point(183, 309);
+            this.descriptionRichTextBox.Name = "descriptionRichTextBox";
+            this.descriptionRichTextBox.Size = new System.Drawing.Size(318, 96);
+            this.descriptionRichTextBox.TabIndex = 9;
+            this.descriptionRichTextBox.Text = "";
+            // 
+            // addDescriptionRichBox
+            // 
+            this.addDescriptionRichBox.AutoSize = true;
+            this.addDescriptionRichBox.Location = new System.Drawing.Point(180, 293);
+            this.addDescriptionRichBox.Name = "addDescriptionRichBox";
+            this.addDescriptionRichBox.Size = new System.Drawing.Size(89, 13);
+            this.addDescriptionRichBox.TabIndex = 10;
+            this.addDescriptionRichBox.Text = "Add a description";
+            // 
+            // hourDateTimePicker
+            // 
+            this.hourDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.hourDateTimePicker.Location = new System.Drawing.Point(183, 251);
+            this.hourDateTimePicker.Name = "hourDateTimePicker";
+            this.hourDateTimePicker.Size = new System.Drawing.Size(225, 20);
+            this.hourDateTimePicker.TabIndex = 12;
+            this.hourDateTimePicker.Value = new System.DateTime(2021, 6, 21, 21, 44, 0, 0);
+            this.hourDateTimePicker.ValueChanged += new System.EventHandler(this.hourDateTimePicker_ValueChanged);
             // 
             // UserMenuCreateAppointmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.hourDateTimePicker);
+            this.Controls.Add(this.addDescriptionRichBox);
+            this.Controls.Add(this.descriptionRichTextBox);
             this.Controls.Add(this.selectHourLabel);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.dateTimePicker);
@@ -149,6 +166,8 @@ namespace projeto_es.Presentation_Layer
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label selectHourLabel;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.RichTextBox descriptionRichTextBox;
+        private System.Windows.Forms.Label addDescriptionRichBox;
+        private System.Windows.Forms.DateTimePicker hourDateTimePicker;
     }
 }

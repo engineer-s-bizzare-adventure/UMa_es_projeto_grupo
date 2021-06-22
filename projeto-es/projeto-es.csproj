@@ -98,6 +98,7 @@
     <Compile Include="Business_Layer\AccountService.cs" />
     <Compile Include="Models\AdminAccount.cs" />
     <Compile Include="Models\Appointment.cs" />
+    <Compile Include="Business_Layer\AppointmentService.cs" />
     <Compile Include="Models\ClientAccount.cs" />
     <Compile Include="Business_Layer\ClientAccountService.cs" />
     <Compile Include="Models\Item.cs" />

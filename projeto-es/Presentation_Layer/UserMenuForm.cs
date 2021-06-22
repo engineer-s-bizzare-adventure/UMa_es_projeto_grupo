@@ -37,9 +37,9 @@ namespace projeto_es.Presentation_Layer
 
         private void appointmentsButton_Click(object sender, EventArgs e)
         {
-            //CHECK FOR APPOINTMENTS FIRST
+            //CHECK FOR APPOINTMENTS FIRST UserMenuCreateAppointmentForm();
             this.Hide();
-            Form userCreateAppointmentForm = new UserMenuCreateAppointmentForm();
+            Form userCreateAppointmentForm = new UserMenuAppointmentsForm();
             userCreateAppointmentForm.ShowDialog();
             this.Show();
         }
