@@ -48,5 +48,13 @@ namespace projeto_es.Models
 
             return Person;
         }
+
+        public int GetClientAccountId(int accountID)
+        {
+            string QueryClientAccountTable = $"SELECT clientaccount.id FROM clientaccount, account WHERE clientaccount.Account_id = account.id AND account.id = {accountID}";
+            var fetchedID = this._conn.Query<int>(QueryClientAccountTable).FirstOrDefault();
+
+            return fetchedID;
+        }
     }
 }
