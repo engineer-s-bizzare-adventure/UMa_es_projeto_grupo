@@ -41,9 +41,6 @@ namespace projeto_es.Presentation_Layer
 
             AppointmentService NewAppointmentService = new AppointmentService();
 
-            Console.WriteLine(this.LoggedSession.Account.PersonId);
-
-
             if(NewAppointmentService.CheckExistingAppointments(LoggedSession))
             {
                 this.Hide();

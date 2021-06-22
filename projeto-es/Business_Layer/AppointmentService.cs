@@ -21,7 +21,7 @@ namespace projeto_es.Models
 
         public bool CheckExistingAppointments(Session session)
         {
-            string checkExistingAppointmentsQuery = "SELECT `description` FROM `appointment`,`clientaccount`WHERE ClientAccount_id = clientaccount.id && clientaccount.id = " + $"{session.Account.Id}";
+            string checkExistingAppointmentsQuery = "SELECT `description` FROM `appointment`,`clientaccount` , `account` WHERE appointment.ClientAccount_id = clientaccount.id && clientaccount.Account_id = account.id && account.id = " + $"{session.Account.Id}";
 
             var count = this._conn.Query(checkExistingAppointmentsQuery);
 
@@ -47,7 +47,7 @@ namespace projeto_es.Models
         public List<Appointment> GetsAppointmentsOfAClient(int AccountID)
         {
             string GetAppointmentsOfAClient = $"SELECT `description` FROM appointment, clientaccount, account" +
-                $" WHERE appointment.ClientAccount_id = clientaccount.id && clientaccount.id = account.id && account.id = {AccountID}";
+                $" WHERE appointment.ClientAccount_id = clientaccount.id && clientaccount.Account_id = account.id && account.id = {AccountID}";
 
             List<Appointment> ListOffAppointments = (List<Appointment>)this._conn.Query<Appointment>(GetAppointmentsOfAClient);
             return ListOffAppointments;
