@@ -13,9 +13,12 @@ namespace projeto_es.Presentation_Layer
 {
     public partial class UserMenuAppointmentsForm : Form
     {
-        public UserMenuAppointmentsForm()
+        public Session LoggedSession { get; set; }
+
+        public UserMenuAppointmentsForm(Session loggedSession)
         {
             InitializeComponent();
+            LoggedSession = loggedSession;
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -32,12 +35,13 @@ namespace projeto_es.Presentation_Layer
         }
 
         private void UserMenuAppointmentsForm_Load(object sender, EventArgs e)
-        {
+        { 
             AppointmentService appointmentService = new AppointmentService();
-            var Appointments = appointmentService.GetsAppointmentsOfAClient(1);
+            var Appointments = appointmentService.GetsAppointmentsOfAClient(LoggedSession.Account.Id);
 
             foreach (var Appointment in Appointments)
             {
+                Console.WriteLine(Appointment.description);
                 appointmentsListBox.Items.Add(Appointment.description);
             }
         }

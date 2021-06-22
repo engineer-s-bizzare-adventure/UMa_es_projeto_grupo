@@ -37,11 +37,28 @@ namespace projeto_es.Presentation_Layer
 
         private void appointmentsButton_Click(object sender, EventArgs e)
         {
-            //CHECK FOR APPOINTMENTS FIRST UserMenuCreateAppointmentForm();
-            this.Hide();
-            Form userCreateAppointmentForm = new UserMenuAppointmentsForm();
-            userCreateAppointmentForm.ShowDialog();
-            this.Show();
+            //CHECK FOR APPOINTMENTS FIRST 
+
+            AppointmentService NewAppointmentService = new AppointmentService();
+
+            Console.WriteLine(this.LoggedSession.Account.PersonId);
+
+
+            if(NewAppointmentService.CheckExistingAppointments(LoggedSession))
+            {
+                this.Hide();
+                Form userShowAppointmentsForm = new UserMenuAppointmentsForm(LoggedSession);
+                userShowAppointmentsForm.ShowDialog();
+                this.Show();
+            }
+
+            else
+            {
+                this.Hide();
+                Form userHasNoAppointmentsForm = new UserMenuNoAppointmentsForm();
+                userHasNoAppointmentsForm.ShowDialog();
+                this.Show();
+            }
         }
 
         private void prescriptionsButton_Click(object sender, EventArgs e)

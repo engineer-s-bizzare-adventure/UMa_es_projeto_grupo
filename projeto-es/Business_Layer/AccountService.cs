@@ -25,7 +25,7 @@ namespace projeto_es.Models
         }
         public Account FetchAccount(string email, string password)
         {
-            string QueryLogIN = $"SELECT `email`, `password` FROM `account` WHERE account.email ='{email}' AND account.password = '{password}'";
+            string QueryLogIN = $"SELECT `id`, `email`, `password` FROM `account` WHERE account.email ='{email}' AND account.password = '{password}'";
             var account = this._conn.Query<Account>(QueryLogIN).FirstOrDefault();
 
             return account;
