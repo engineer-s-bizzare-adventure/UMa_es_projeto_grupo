@@ -44,15 +44,11 @@ namespace projeto_es.Presentation_Layer
             // staffListBox
             // 
             this.staffListBox.FormattingEnabled = true;
-            this.staffListBox.Items.AddRange(new object[] {
-            "Dr. Joao",
-            "Dr. Alberto",
-            "Dr. Milos",
-            "Dr. Scuff"});
             this.staffListBox.Location = new System.Drawing.Point(183, 65);
             this.staffListBox.Name = "staffListBox";
             this.staffListBox.Size = new System.Drawing.Size(413, 82);
             this.staffListBox.TabIndex = 0;
+            this.staffListBox.SelectedIndexChanged += new System.EventHandler(this.staffListBox_SelectedIndexChanged);
             // 
             // selectDoctorLabel
             // 

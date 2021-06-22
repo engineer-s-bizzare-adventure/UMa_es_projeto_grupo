@@ -17,6 +17,7 @@ namespace projeto_es.Presentation_Layer
         public UserMenuCreateAppointmentForm()
         {
             InitializeComponent();
+
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -41,6 +42,13 @@ namespace projeto_es.Presentation_Layer
 
         private void UserMenuCreateAppointmentForm_Load(object sender, EventArgs e)
         {
+            AccountService NewAccountService = new AccountService();
+            var StaffMembers = NewAccountService.GetAllStaffMembers();
+           
+            foreach (var Staff in StaffMembers)
+            {
+                staffListBox.Items.Add(Staff.name);
+            }
         }
 
         private void selectCalendarLabel_Click(object sender, EventArgs e)
@@ -61,6 +69,11 @@ namespace projeto_es.Presentation_Layer
         private void hourDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
             hourDateTimePicker.Format = DateTimePickerFormat.Time;
+        }
+
+        private void staffListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+                
         }
     }
 }
