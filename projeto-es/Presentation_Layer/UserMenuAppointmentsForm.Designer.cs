@@ -90,15 +90,11 @@ namespace projeto_es.Presentation_Layer
             // appointmentsListBox
             // 
             this.appointmentsListBox.FormattingEnabled = true;
-            this.appointmentsListBox.Items.AddRange(new object[] {
-            "Dr. Joao - 20:00 | 10/06/2021",
-            "Dr. Joao - 22:00 | 11/06/2021 - Faltou!",
-            "Dr. Pedro - 11:00 | 12/06/2021  (Hoje)",
-            "Dr. Joao - 23:00 | 13/06/2021"});
             this.appointmentsListBox.Location = new System.Drawing.Point(214, 105);
             this.appointmentsListBox.Name = "appointmentsListBox";
             this.appointmentsListBox.Size = new System.Drawing.Size(377, 186);
             this.appointmentsListBox.TabIndex = 5;
+            this.appointmentsListBox.SelectedIndexChanged += new System.EventHandler(this.appointmentsListBox_SelectedIndexChanged);
             // 
             // UserMenuAppointmentsForm
             // 
