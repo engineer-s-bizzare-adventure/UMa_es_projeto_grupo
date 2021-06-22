@@ -30,15 +30,14 @@ namespace projeto_es.Presentation_Layer
  
             AppointmentService NewAppointment = new AppointmentService();
 
-            string formatedDate = dateTimePicker.Value.ToString("yyyy-MM-dd HH:mm:ss.fff");
-
-            Console.WriteLine(formatedDate);
+            string formatedDate = dateTimePicker.Value.ToString("yyyy-MM-dd");
+            string formatedHour = dateTimePicker.Value.ToString("yyyy-MM-dd HH:mm:ss");
 
             NewAppointment.CreateAppointment(new Appointment()
             {
-                date = dateTimePicker.Value,
+                date = formatedDate,
                 description = descriptionRichTextBox.Text,
-                scheduled_time = hourDateTimePicker.Value,
+                scheduled_time = formatedHour,
             });
 
             this.Close();

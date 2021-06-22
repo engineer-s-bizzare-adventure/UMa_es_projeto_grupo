@@ -127,7 +127,7 @@ namespace projeto_es.Presentation_Layer
             // hourDateTimePicker
             // 
             this.hourDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.hourDateTimePicker.Location = new System.Drawing.Point(183, 251);
+            this.hourDateTimePicker.Location = new System.Drawing.Point(183, 240);
             this.hourDateTimePicker.Name = "hourDateTimePicker";
             this.hourDateTimePicker.Size = new System.Drawing.Size(225, 20);
             this.hourDateTimePicker.TabIndex = 12;
