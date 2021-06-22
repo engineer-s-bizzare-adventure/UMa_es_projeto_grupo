@@ -8,6 +8,7 @@ namespace projeto_es.Models
 {
     public class Session
     {
+        public int clientID = 0;
         public Session (Account account, Person person)
         {
             Account = account;

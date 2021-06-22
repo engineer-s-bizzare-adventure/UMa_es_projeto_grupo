@@ -24,6 +24,7 @@ namespace projeto_es.Presentation_Layer
 
             Person personAssociatedToAccount = accountService.GetUserDataFromAccount(account.Email);
             Session accountSession = new Session(account, personAssociatedToAccount);
+            accountSession.clientID = accountService.GetClientAccountId(account.Id);
 
             this.Hide();
             Form userMenuForm = new UserMenuForm(accountSession);
