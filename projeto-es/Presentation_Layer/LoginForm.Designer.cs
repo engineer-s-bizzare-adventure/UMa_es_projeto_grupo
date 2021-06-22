@@ -1,4 +1,6 @@
 ﻿
+using System.Drawing;
+
 namespace projeto_es.Presentation_Layer
 {
     partial class LoginForm
@@ -29,6 +31,7 @@ namespace projeto_es.Presentation_Layer
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.backButton = new System.Windows.Forms.Button();
             this.LoginButton = new System.Windows.Forms.Button();
             this.emailLabel = new System.Windows.Forms.Label();
@@ -36,78 +39,65 @@ namespace projeto_es.Presentation_Layer
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.label_wrong = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(449, 12);
+            resources.ApplyResources(this.backButton, "backButton");
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(23, 23);
-            this.backButton.TabIndex = 0;
-            this.backButton.Text = "<";
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // LoginButton
             // 
-            this.LoginButton.Location = new System.Drawing.Point(403, 116);
+            resources.ApplyResources(this.LoginButton, "LoginButton");
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(70, 23);
-            this.LoginButton.TabIndex = 1;
-            this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = true;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // emailLabel
             // 
-            this.emailLabel.AutoSize = true;
-            this.emailLabel.Location = new System.Drawing.Point(10, 35);
+            resources.ApplyResources(this.emailLabel, "emailLabel");
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(32, 13);
-            this.emailLabel.TabIndex = 2;
-            this.emailLabel.Text = "Email";
-            this.emailLabel.Click += new System.EventHandler(this.emailLabel_Click);
             // 
             // passwordLabel
             // 
-            this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(9, 74);
+            resources.ApplyResources(this.passwordLabel, "passwordLabel");
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(53, 13);
-            this.passwordLabel.TabIndex = 3;
-            this.passwordLabel.Text = "Password";
-            this.passwordLabel.Click += new System.EventHandler(this.passwordLabel_Click);
             // 
             // passwordTextBox
             // 
             this.passwordTextBox.AllowDrop = true;
-            this.passwordTextBox.Location = new System.Drawing.Point(12, 90);
+            resources.ApplyResources(this.passwordTextBox, "passwordTextBox");
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(460, 20);
-            this.passwordTextBox.TabIndex = 4;
             this.passwordTextBox.UseSystemPasswordChar = true;
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(12, 51);
+            resources.ApplyResources(this.emailTextBox, "emailTextBox");
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(460, 20);
-            this.emailTextBox.TabIndex = 5;
             // 
             // label_wrong
             // 
-            this.label_wrong.AutoSize = true;
-            this.label_wrong.Location = new System.Drawing.Point(24, 129);
+            resources.ApplyResources(this.label_wrong, "label_wrong");
+            this.label_wrong.ForeColor = System.Drawing.Color.Red;
             this.label_wrong.Name = "label_wrong";
-            this.label_wrong.Size = new System.Drawing.Size(35, 13);
-            this.label_wrong.TabIndex = 6;
-            this.label_wrong.Text = "label1";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.view_password);
+            this.button1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.view_password);
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 161);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label_wrong);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.passwordTextBox);
@@ -115,9 +105,10 @@ namespace projeto_es.Presentation_Layer
             this.Controls.Add(this.emailLabel);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.backButton);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "LoginForm";
-            this.Text = "LoginForm";
-            this.Load += new System.EventHandler(this.LoginForm_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.closing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,5 +123,6 @@ namespace projeto_es.Presentation_Layer
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.Label label_wrong;
+        private System.Windows.Forms.Button button1;
     }
 }

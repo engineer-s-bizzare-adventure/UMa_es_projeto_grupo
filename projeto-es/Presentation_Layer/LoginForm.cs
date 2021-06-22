@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,46 +13,63 @@ namespace projeto_es.Presentation_Layer
 {
     public partial class LoginForm : Form
     {
-        public LoginForm()
+        private CredentialsForm credentialsForm_;
+        private Dictionary<String, String> autentification;
+        public LoginForm(CredentialsForm credentials)
         {
+            credentialsForm_ = credentials;
             InitializeComponent();
             label_wrong.Visible = false;
+            autentification = new Dictionary<string, string>();
+            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\pedro\OneDrive\Área de Trabalho\autentifica.txt");
+            for (int index=0; index<lines.Length; index+=2)
+            {
+                autentification.Add(lines[index], lines[index+1]);
+            }
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            if (emailTextBox.Text.ToLower() == "pedro" && passwordTextBox.Text.ToLower() == "aaa")
+            List<String> keys = new List<string>(), values = new List<string>();
+            keys.AddRange(autentification.Keys);
+            values.AddRange(autentification.Values);
+            bool canGo = false;
+            for (int autentiNumber = 0; autentiNumber < autentification.Count; autentiNumber++)
+            {
+                if (emailTextBox.Text.ToLower() == keys[autentiNumber] && passwordTextBox.Text.ToLower() == values[autentiNumber])
+                {
+                    canGo = true;
+                }
+            }
+            if (canGo)
             {
                 this.Hide();
-                var menuStaff = new MainMenuStaff();
+                credentialsForm_.Hide();
+                var menuStaff = new MainMenuStaff(emailTextBox.Text, credentialsForm_);
                 menuStaff.ShowDialog();
             }
             else
             {
-                label_wrong.Text = "Algo está errado";
-                label_wrong.ForeColor = Color.Red;
+                emailTextBox.Text = "";
+                passwordTextBox.Text = "";
+                label_wrong.Text = @"Sorry, but the email or the password is wrong";
                 label_wrong.Visible = true;
             }
         }
 
-        private void emailLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void passwordLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void backButton_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            this.Hide();
         }
 
-        private void LoginForm_Load(object sender, EventArgs e)
+        private void view_password(object sender, MouseEventArgs e)
         {
+            passwordTextBox.UseSystemPasswordChar = !passwordTextBox.UseSystemPasswordChar;
+        }
 
+        private void closing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

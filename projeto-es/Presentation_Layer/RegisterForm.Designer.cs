@@ -29,12 +29,14 @@ namespace projeto_es
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.registerLabel = new System.Windows.Forms.Label();
             this.passwordLabel = new System.Windows.Forms.Label();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.registerButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
+            this.b = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // emailTextBox
@@ -43,7 +45,6 @@ namespace projeto_es
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(460, 20);
             this.emailTextBox.TabIndex = 0;
-            this.emailTextBox.TextChanged += new System.EventHandler(this.emailTextBox_TextChanged);
             // 
             // registerLabel
             // 
@@ -53,7 +54,6 @@ namespace projeto_es
             this.registerLabel.Size = new System.Drawing.Size(32, 13);
             this.registerLabel.TabIndex = 1;
             this.registerLabel.Text = "Email";
-            this.registerLabel.Click += new System.EventHandler(this.registerLabel_Click);
             // 
             // passwordLabel
             // 
@@ -80,7 +80,6 @@ namespace projeto_es
             this.registerButton.TabIndex = 4;
             this.registerButton.Text = "Register";
             this.registerButton.UseVisualStyleBackColor = true;
-            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // backButton
             // 
@@ -92,11 +91,25 @@ namespace projeto_es
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
+            // b
+            // 
+            this.b.BackColor = System.Drawing.Color.White;
+            this.b.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("b.BackgroundImage")));
+            this.b.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.b.Location = new System.Drawing.Point(444, 91);
+            this.b.Name = "b";
+            this.b.Size = new System.Drawing.Size(28, 19);
+            this.b.TabIndex = 8;
+            this.b.UseVisualStyleBackColor = false;
+            this.b.MouseDown += new System.Windows.Forms.MouseEventHandler(this.view_password);
+            this.b.MouseUp += new System.Windows.Forms.MouseEventHandler(this.view_password);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 161);
+            this.Controls.Add(this.b);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.passwordTextBox);
@@ -105,7 +118,7 @@ namespace projeto_es
             this.Controls.Add(this.emailTextBox);
             this.Name = "RegisterForm";
             this.Text = "RegisterForm";
-            this.Load += new System.EventHandler(this.RegisterForm_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.close);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,5 +132,6 @@ namespace projeto_es
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Button registerButton;
         private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.Button b;
     }
 }

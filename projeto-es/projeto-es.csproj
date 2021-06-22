@@ -75,6 +75,9 @@
     <EmbeddedResource Include="Presentation_Layer\CredentialsForm.resx">
       <DependentUpon>CredentialsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\LoginForm.aa.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation_Layer\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

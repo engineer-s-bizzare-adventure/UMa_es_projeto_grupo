@@ -1,4 +1,6 @@
 ﻿
+using System.Windows.Forms;
+
 namespace projeto_es
 {
     partial class CredentialsForm
@@ -56,7 +58,6 @@ namespace projeto_es
             this.loginRegisterLabel.Size = new System.Drawing.Size(143, 13);
             this.loginRegisterLabel.TabIndex = 1;
             this.loginRegisterLabel.Text = "Faça login ou registe-se";
-            this.loginRegisterLabel.Click += new System.EventHandler(this.loginRegisterLabel_Click);
             // 
             // loginButton
             // 
@@ -98,9 +99,11 @@ namespace projeto_es
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.loginRegisterLabel);
             this.Controls.Add(this.welcomeLabel);
+            this.MaximizeBox = false;
             this.Name = "CredentialsForm";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.CredentialsForm_Load);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Bem-vindo";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.close);
             ((System.ComponentModel.ISupportInitialize)(this.credentialsPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

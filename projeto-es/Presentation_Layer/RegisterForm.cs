@@ -12,34 +12,28 @@ namespace projeto_es
 {
     public partial class RegisterForm : Form
     {
-        public RegisterForm()
+        private CredentialsForm credentialsForm_;
+        public RegisterForm(CredentialsForm credentials)
         {
+            credentialsForm_ = credentials;
             InitializeComponent();
-        }
-
-        private void emailTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void registerLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void registerButton_Click(object sender, EventArgs e)
-        {
-
+            credentialsForm_.Close();
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            Hide();
+            credentialsForm_.Show();
         }
 
-        private void RegisterForm_Load(object sender, EventArgs e)
+        private void close(object sender, FormClosingEventArgs e)
         {
+            Application.Exit();
+        }
 
+        private void view_password(object sender, MouseEventArgs e)
+        {
+            passwordTextBox.UseSystemPasswordChar = !passwordTextBox.UseSystemPasswordChar;
         }
     }
 }

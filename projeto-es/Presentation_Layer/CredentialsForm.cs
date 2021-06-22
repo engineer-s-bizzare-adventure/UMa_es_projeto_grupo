@@ -14,6 +14,10 @@ namespace projeto_es
 {
     public partial class CredentialsForm : Form
     {
+        private Form login = null;
+        private Form register = null;
+
+        // Verificar se há maneira de juntar o LoginForm e o RegisterForm
         public CredentialsForm()
         {
             InitializeComponent();
@@ -21,26 +25,36 @@ namespace projeto_es
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form loginForm = new LoginForm();
-            loginForm.ShowDialog();
+            if (login == null)
+            {
+                Form loginForm = new LoginForm(this);
+                login = loginForm;
+                loginForm.Show();
+            }
+            else
+            {
+                login.Show();
+            }
+            
         }
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form registerForm = new RegisterForm();
-            registerForm.ShowDialog();
+            if (register == null)
+            {
+                Form registerForm = new RegisterForm(this);
+                register = registerForm;
+                registerForm.Show();
+            }
+            else
+            {
+                register.Show();
+            }
         }
 
-        private void loginRegisterLabel_Click(object sender, EventArgs e)
+        private void close(object sender, FormClosingEventArgs e)
         {
-
-        }
-
-        private void CredentialsForm_Load(object sender, EventArgs e)
-        {
-
+            Application.Exit();
         }
     }
 }

@@ -117,10 +117,262 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="backButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>449, 12</value>
+  </data>
+  <data name="backButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="backButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="backButton.Text" xml:space="preserve">
+    <value>&lt;</value>
+  </data>
+  <data name="&gt;&gt;backButton.Name" xml:space="preserve">
+    <value>backButton</value>
+  </data>
+  <data name="&gt;&gt;backButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;backButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;backButton.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="LoginButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>403, 116</value>
+  </data>
+  <data name="LoginButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 23</value>
+  </data>
+  <data name="LoginButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="LoginButton.Text" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="&gt;&gt;LoginButton.Name" xml:space="preserve">
+    <value>LoginButton</value>
+  </data>
+  <data name="&gt;&gt;LoginButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LoginButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LoginButton.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="emailLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="emailLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 35</value>
+  </data>
+  <data name="emailLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
+  </data>
+  <data name="emailLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="emailLabel.Text" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="&gt;&gt;emailLabel.Name" xml:space="preserve">
+    <value>emailLabel</value>
+  </data>
+  <data name="&gt;&gt;emailLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;emailLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;emailLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="passwordLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="passwordLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 74</value>
+  </data>
+  <data name="passwordLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="passwordLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="passwordLabel.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="&gt;&gt;passwordLabel.Name" xml:space="preserve">
+    <value>passwordLabel</value>
+  </data>
+  <data name="&gt;&gt;passwordLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;passwordLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;passwordLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <metadata name="passwordTextBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="passwordTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 90</value>
+  </data>
+  <data name="passwordTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>460, 20</value>
+  </data>
+  <data name="passwordTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;passwordTextBox.Name" xml:space="preserve">
+    <value>passwordTextBox</value>
+  </data>
+  <data name="&gt;&gt;passwordTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;passwordTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;passwordTextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <metadata name="emailTextBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="emailTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 51</value>
+  </data>
+  <data name="emailTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>460, 20</value>
+  </data>
+  <data name="emailTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;emailTextBox.Name" xml:space="preserve">
+    <value>emailTextBox</value>
+  </data>
+  <data name="&gt;&gt;emailTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;emailTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;emailTextBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label_wrong.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_wrong.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 129</value>
+  </data>
+  <data name="label_wrong.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
+  </data>
+  <data name="label_wrong.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label_wrong.Text" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label_wrong.Name" xml:space="preserve">
+    <value>label_wrong</value>
+  </data>
+  <data name="&gt;&gt;label_wrong.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_wrong.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label_wrong.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="button1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="button1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        r9d/6FY3p+M7p5oAAAAASUVORK5CYII=
+</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>443, 90</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 19</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>484, 161</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Login Form</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>LoginForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

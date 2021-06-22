@@ -34,3 +34,6 @@ C:\Users\pedro\OneDrive\Documentos\GitHub\UMa_es_projeto_grupo\projeto-es\obj\De
 C:\Users\pedro\OneDrive\Documentos\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto-es.csproj.CoreCompileInputs.cache
 C:\Users\pedro\OneDrive\Documentos\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto-es.exe
 C:\Users\pedro\OneDrive\Documentos\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto-es.pdb
+C:\Users\pedro\OneDrive\Documentos\GitHub\UMa_es_projeto_grupo\projeto-es\bin\Debug\aa\projeto-es.resources.dll
+C:\Users\pedro\OneDrive\Documentos\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.LoginForm.aa.resources
+C:\Users\pedro\OneDrive\Documentos\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\aa\projeto-es.resources.dll
