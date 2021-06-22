@@ -40,7 +40,7 @@ namespace projeto_es.Models
             List<Person> ListOfStaff = (List<Person>)this._conn.Query<Person>(QueryGetAllStaffMembers);
 
             return ListOfStaff;
-
+        }
         public Person GetUserDataFromAccount(string email)
         {
             string QueryUserData = $"SELECT * FROM clientaccount, account, person WHERE clientaccount.Account_id = account.id && account.Person_id = person.id && account.email= '{email}'";
