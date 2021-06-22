@@ -1,12 +1,5 @@
 ﻿using projeto_es.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace projeto_es.Presentation_Layer
@@ -21,16 +14,19 @@ namespace projeto_es.Presentation_Layer
         private void LoginButton_Click(object sender, EventArgs e)
         {
             AccountService accountService = new AccountService();
-            var loggedAccount = accountService.CheckLogin(emailTextBox.Text, passwordTextBox.Text);
+            Account account = accountService.FetchAccount(emailTextBox.Text, passwordTextBox.Text);
 
-            if (loggedAccount == null)
+            if (account == null)
             {
                 MessageBox.Show("Error logging in! Check details.");
                 return;
             }
 
+            Person personAssociatedToAccount = accountService.GetUserDataFromAccount(account.Email);
+            Session accountSession = new Session(account, personAssociatedToAccount);
+
             this.Hide();
-            Form userMenuForm = new UserMenuForm(loggedAccount);
+            Form userMenuForm = new UserMenuForm(accountSession);
             userMenuForm.ShowDialog();
             this.DialogResult = DialogResult.OK;
         }

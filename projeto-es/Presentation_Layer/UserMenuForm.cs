@@ -7,13 +7,13 @@ namespace projeto_es.Presentation_Layer
     public partial class UserMenuForm : Form
     {
 
-        public UserMenuForm(Account loggedSession)
+        public UserMenuForm(Session loggedSession)
         {
             InitializeComponent();
             LoggedSession = loggedSession;
         }
 
-        public Account LoggedSession {get; set;}
+        public Session LoggedSession { get; set;}
         private void accountButton_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -32,7 +32,7 @@ namespace projeto_es.Presentation_Layer
 
         private void UserMenuForm_Load(object sender, EventArgs e)
         {
-            welcomeLabel.Text = "Seja muito bem vindo(a), " + LoggedSession.Email;
+            welcomeLabel.Text = "Welcome, " + LoggedSession.Person.name + " !";
         }
 
         private void appointmentsButton_Click(object sender, EventArgs e)

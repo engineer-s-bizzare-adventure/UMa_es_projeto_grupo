@@ -23,7 +23,7 @@ namespace projeto_es.Models
             string sql = $"INSERT INTO `account`(`email`, `password`, `Person_id`) VALUES ('{account.Email}', '{account.Password}', LAST_INSERT_ID())";
             this._conn.Execute(sql);
         }
-        public Account CheckLogin(string email, string password)
+        public Account FetchAccount(string email, string password)
         {
             string QueryLogIN = $"SELECT `email`, `password` FROM `account` WHERE account.email ='{email}' AND account.password = '{password}'";
             var account = this._conn.Query<Account>(QueryLogIN).FirstOrDefault();
@@ -40,6 +40,13 @@ namespace projeto_es.Models
             List<Person> ListOfStaff = (List<Person>)this._conn.Query<Person>(QueryGetAllStaffMembers);
 
             return ListOfStaff;
+
+        public Person GetUserDataFromAccount(string email)
+        {
+            string QueryUserData = $"SELECT * FROM clientaccount, account, person WHERE clientaccount.Account_id = account.id && account.Person_id = person.id && account.email= '{email}'";
+            var Person = this._conn.Query<Person>(QueryUserData).FirstOrDefault();
+
+            return Person;
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace projeto_es.Models
 {
-    class Item
+    public class Item
     {
         public uint Id { get; set; }
         public string Name { get; set; }
