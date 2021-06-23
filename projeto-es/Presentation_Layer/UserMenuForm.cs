@@ -32,7 +32,7 @@ namespace projeto_es.Presentation_Layer
 
         private void UserMenuForm_Load(object sender, EventArgs e)
         {
-            welcomeLabel.Text = "Welcome, " + LoggedSession.Person.name + " !" + "Client id: " + LoggedSession.clientID;
+            welcomeLabel.Text = "Welcome, " + LoggedSession.Person.name + " !";
         }
 
         private void appointmentsButton_Click(object sender, EventArgs e)
@@ -62,7 +62,7 @@ namespace projeto_es.Presentation_Layer
         {
             //CHECK FOR PRESCRIPTIONS FIRST
             this.Hide();
-            Form userPrescriptionForm = new UserMenuPrescriptionsForm();
+            Form userPrescriptionForm = new UserMenuPrescriptionsForm(LoggedSession);
             userPrescriptionForm.ShowDialog();
             this.Show();
         }
