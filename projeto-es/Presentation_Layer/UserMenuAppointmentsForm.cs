@@ -41,7 +41,6 @@ namespace projeto_es.Presentation_Layer
 
             foreach (var Appointment in Appointments)
             {
-                Console.WriteLine(Appointment.description);
                 appointmentsListBox.Items.Add(Appointment.description);
                 AppointmentIDlistBox.Items.Add(Appointment.id);
             }
@@ -54,28 +53,44 @@ namespace projeto_es.Presentation_Layer
 
             var Appointments = appointmentService.GetsAppointmentsOfAClient(LoggedSession.Account.Id);
 
-            foreach (var appointment in Appointments) {
 
-                if (localDate == appointment.scheduled_time)
+            foreach(var appointment in Appointments)
+            {
+                if(appointment.id == (uint)AppointmentIDlistBox.SelectedItem)
                 {
 
+                    DateTime selectedDate = Convert.ToDateTime(appointment.scheduled_time);
+
+                    Console.WriteLine(localDate);
+                    Console.WriteLine(selectedDate);
+                    Console.WriteLine(appointment.scheduled_time);
+
+                    if (selectedDate < localDate)
+                    {
+                        Console.WriteLine("The selected date is not possible.");
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("The selected date good.");
+                    }
 
                 }
-                else
-                {
-                    //Nao pode apagar
-                }
+
             }
+
         }
         private void atendAppointmentButton_Click(object sender, EventArgs e)
         {
-            checkAvailability(DateTime selectedAppointmentDate);
+            checkAvailability();
 
         }
 
         private void cancelAppointmentButton_Click(object sender, EventArgs e)
         {
-;
+            appointmentService.DeleteAppointment((uint)AppointmentIDlistBox.SelectedItem);
+            Console.WriteLine("Deleted appointment: " + (uint)AppointmentIDlistBox.SelectedItem);
+
         }
 
         private void appointmentsListBox_SelectedIndexChanged(object sender, EventArgs e)
