@@ -29,19 +29,28 @@ namespace projeto_es.Presentation_Layer
         {
  
             AppointmentService NewAppointment = new AppointmentService();
-            int ClientAccountid = NewAccountService.GetClientAccountId(LoggedSession.Account.Id);
+            uint ClientAccountid = (uint)NewAccountService.GetClientAccountId(LoggedSession.Account.Id);
             string formatedDate = dateTimePicker.Value.ToString("yyyy-MM-dd");
             string formatedHour = dateTimePicker.Value.ToString("yyyy-MM-dd HH:mm:ss");
-            int StaffAccountId = NewAccountService.GetStaffMembersID((int)StaffIDlistBox.SelectedItem);
-
-            NewAppointment.CreateAppointment(new Appointment()
-            {
-                date = formatedDate,
-                description = descriptionRichTextBox.Text,
-                scheduled_time = formatedHour,
-            }, ClientAccountid, StaffAccountId);
             
-            this.Close();
+            if (StaffIDlistBox.SelectedItem == null)
+            {
+                selectStaffLabel.Visible = true;
+
+            }
+            else
+            {
+                uint StaffAccountId = (uint)NewAccountService.GetStaffMembersID((int)StaffIDlistBox.SelectedItem);
+                NewAppointment.CreateAppointment(new Appointment()
+                {
+                    date = formatedDate,
+                    description = descriptionRichTextBox.Text,
+                    scheduled_time = formatedHour,
+                    StaffAccountId = StaffAccountId,
+                    ClientAccountId = ClientAccountid,
+                });
+                this.Close();
+            }
         }
 
         private void UserMenuCreateAppointmentForm_Load(object sender, EventArgs e)
@@ -85,6 +94,11 @@ namespace projeto_es.Presentation_Layer
         private void StaffIDlistBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void selectStaffLabel_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

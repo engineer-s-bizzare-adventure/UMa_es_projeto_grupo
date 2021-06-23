@@ -40,6 +40,7 @@ namespace projeto_es.Presentation_Layer
             this.addDescriptionRichBox = new System.Windows.Forms.Label();
             this.hourDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.StaffIDlistBox = new System.Windows.Forms.ListBox();
+            this.selectStaffLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // staffListBox
@@ -146,11 +147,24 @@ namespace projeto_es.Presentation_Layer
             this.StaffIDlistBox.TabIndex = 13;
             this.StaffIDlistBox.SelectedIndexChanged += new System.EventHandler(this.StaffIDlistBox_SelectedIndexChanged);
             // 
+            // selectStaffLabel
+            // 
+            this.selectStaffLabel.AutoSize = true;
+            this.selectStaffLabel.ForeColor = System.Drawing.Color.Red;
+            this.selectStaffLabel.Location = new System.Drawing.Point(424, 76);
+            this.selectStaffLabel.Name = "selectStaffLabel";
+            this.selectStaffLabel.Size = new System.Drawing.Size(124, 13);
+            this.selectStaffLabel.TabIndex = 14;
+            this.selectStaffLabel.Text = "You must select a doctor";
+            this.selectStaffLabel.Visible = false;
+            this.selectStaffLabel.Click += new System.EventHandler(this.selectStaffLabel_Click);
+            // 
             // UserMenuCreateAppointmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.selectStaffLabel);
             this.Controls.Add(this.StaffIDlistBox);
             this.Controls.Add(this.hourDateTimePicker);
             this.Controls.Add(this.addDescriptionRichBox);
@@ -183,5 +197,6 @@ namespace projeto_es.Presentation_Layer
         private System.Windows.Forms.Label addDescriptionRichBox;
         private System.Windows.Forms.DateTimePicker hourDateTimePicker;
         private System.Windows.Forms.ListBox StaffIDlistBox;
+        private System.Windows.Forms.Label selectStaffLabel;
     }
 }

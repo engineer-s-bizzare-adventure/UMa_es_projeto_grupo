@@ -35,6 +35,12 @@ namespace projeto_es.Presentation_Layer
             this.atendAppointmentButton = new System.Windows.Forms.Button();
             this.cancelAppointmentButton = new System.Windows.Forms.Button();
             this.appointmentsListBox = new System.Windows.Forms.ListBox();
+            this.AppointmentIDlistBox = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.scheduledTimeListBox = new System.Windows.Forms.ListBox();
+            this.errorLabel = new System.Windows.Forms.Label();
+            this.scheduledTimeLabel = new System.Windows.Forms.Label();
+            this.idLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // createPrescriptionButton
@@ -90,17 +96,78 @@ namespace projeto_es.Presentation_Layer
             // appointmentsListBox
             // 
             this.appointmentsListBox.FormattingEnabled = true;
-            this.appointmentsListBox.Location = new System.Drawing.Point(214, 105);
+            this.appointmentsListBox.Location = new System.Drawing.Point(130, 105);
             this.appointmentsListBox.Name = "appointmentsListBox";
+            this.appointmentsListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.appointmentsListBox.Size = new System.Drawing.Size(377, 186);
             this.appointmentsListBox.TabIndex = 5;
             this.appointmentsListBox.SelectedIndexChanged += new System.EventHandler(this.appointmentsListBox_SelectedIndexChanged);
+            // 
+            // AppointmentIDlistBox
+            // 
+            this.AppointmentIDlistBox.FormattingEnabled = true;
+            this.AppointmentIDlistBox.Location = new System.Drawing.Point(640, 105);
+            this.AppointmentIDlistBox.Name = "AppointmentIDlistBox";
+            this.AppointmentIDlistBox.Size = new System.Drawing.Size(36, 186);
+            this.AppointmentIDlistBox.TabIndex = 6;
+            this.AppointmentIDlistBox.SelectedIndexChanged += new System.EventHandler(this.AppointmentIDlistBox_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(127, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Select an appointment id";
+            // 
+            // scheduledTimeListBox
+            // 
+            this.scheduledTimeListBox.FormattingEnabled = true;
+            this.scheduledTimeListBox.Location = new System.Drawing.Point(513, 105);
+            this.scheduledTimeListBox.Name = "scheduledTimeListBox";
+            this.scheduledTimeListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.scheduledTimeListBox.Size = new System.Drawing.Size(120, 186);
+            this.scheduledTimeListBox.TabIndex = 8;
+            // 
+            // errorLabel
+            // 
+            this.errorLabel.AutoSize = true;
+            this.errorLabel.ForeColor = System.Drawing.Color.Red;
+            this.errorLabel.Location = new System.Drawing.Point(127, 294);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(0, 13);
+            this.errorLabel.TabIndex = 9;
+            // 
+            // scheduledTimeLabel
+            // 
+            this.scheduledTimeLabel.AutoSize = true;
+            this.scheduledTimeLabel.Location = new System.Drawing.Point(510, 89);
+            this.scheduledTimeLabel.Name = "scheduledTimeLabel";
+            this.scheduledTimeLabel.Size = new System.Drawing.Size(81, 13);
+            this.scheduledTimeLabel.TabIndex = 10;
+            this.scheduledTimeLabel.Text = "ScheduledTime";
+            // 
+            // idLabel
+            // 
+            this.idLabel.AutoSize = true;
+            this.idLabel.Location = new System.Drawing.Point(637, 89);
+            this.idLabel.Name = "idLabel";
+            this.idLabel.Size = new System.Drawing.Size(18, 13);
+            this.idLabel.TabIndex = 11;
+            this.idLabel.Text = "ID";
             // 
             // UserMenuAppointmentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.idLabel);
+            this.Controls.Add(this.scheduledTimeLabel);
+            this.Controls.Add(this.errorLabel);
+            this.Controls.Add(this.scheduledTimeListBox);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.AppointmentIDlistBox);
             this.Controls.Add(this.appointmentsListBox);
             this.Controls.Add(this.cancelAppointmentButton);
             this.Controls.Add(this.atendAppointmentButton);
@@ -123,5 +190,11 @@ namespace projeto_es.Presentation_Layer
         private System.Windows.Forms.Button atendAppointmentButton;
         private System.Windows.Forms.Button cancelAppointmentButton;
         private System.Windows.Forms.ListBox appointmentsListBox;
+        private System.Windows.Forms.ListBox AppointmentIDlistBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox scheduledTimeListBox;
+        private System.Windows.Forms.Label errorLabel;
+        private System.Windows.Forms.Label scheduledTimeLabel;
+        private System.Windows.Forms.Label idLabel;
     }
 }
