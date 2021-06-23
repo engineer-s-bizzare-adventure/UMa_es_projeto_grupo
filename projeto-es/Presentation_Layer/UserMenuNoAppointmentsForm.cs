@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projeto_es.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,12 @@ namespace projeto_es.Presentation_Layer
 {
     public partial class UserMenuNoAppointmentsForm : Form
     {
-        public UserMenuNoAppointmentsForm()
+        public UserMenuNoAppointmentsForm(Session loggedSession)
         {
             InitializeComponent();
+            LoggedSession = loggedSession;
         }
+        public Session LoggedSession { get; set; }
 
         private void backButton_Click(object sender, EventArgs e)
         {
@@ -25,7 +28,7 @@ namespace projeto_es.Presentation_Layer
         private void createAppointmentButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form userCreateAppointmentForm = new UserMenuCreateAppointmentForm();
+            Form userCreateAppointmentForm = new UserMenuCreateAppointmentForm(LoggedSession);
             userCreateAppointmentForm.ShowDialog();
             this.Close();
         }

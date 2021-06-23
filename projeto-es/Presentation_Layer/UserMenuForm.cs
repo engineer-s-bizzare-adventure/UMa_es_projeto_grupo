@@ -52,7 +52,7 @@ namespace projeto_es.Presentation_Layer
             else
             {
                 this.Hide();
-                Form userHasNoAppointmentsForm = new UserMenuNoAppointmentsForm();
+                Form userHasNoAppointmentsForm = new UserMenuNoAppointmentsForm(LoggedSession);
                 userHasNoAppointmentsForm.ShowDialog();
                 this.Show();
             }

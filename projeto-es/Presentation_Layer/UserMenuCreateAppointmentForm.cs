@@ -13,13 +13,13 @@ namespace projeto_es.Presentation_Layer
 {
     public partial class UserMenuCreateAppointmentForm : Form
     {
-
-        public UserMenuCreateAppointmentForm()
+        AccountService NewAccountService = new AccountService();
+        public UserMenuCreateAppointmentForm(Session loggedSession)
         {
             InitializeComponent();
-
+            LoggedSession = loggedSession;
         }
-
+        public Session LoggedSession { get; set; }
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -29,7 +29,7 @@ namespace projeto_es.Presentation_Layer
         {
  
             AppointmentService NewAppointment = new AppointmentService();
-
+            int ClientAccountid = NewAccountService.GetClientAccountId(LoggedSession.Account.Id);
             string formatedDate = dateTimePicker.Value.ToString("yyyy-MM-dd");
             string formatedHour = dateTimePicker.Value.ToString("yyyy-MM-dd HH:mm:ss");
 
@@ -38,14 +38,14 @@ namespace projeto_es.Presentation_Layer
                 date = formatedDate,
                 description = descriptionRichTextBox.Text,
                 scheduled_time = formatedHour,
-            });
+            }, ClientAccountid);
 
             this.Close();
         }
 
         private void UserMenuCreateAppointmentForm_Load(object sender, EventArgs e)
         {
-            AccountService NewAccountService = new AccountService();
+            
             var StaffMembers = NewAccountService.GetAllStaffMembers();
            
             foreach (var Staff in StaffMembers)

@@ -29,7 +29,7 @@ namespace projeto_es.Presentation_Layer
         private void createPrescriptionButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form userCreateAppointmentForm = new UserMenuCreateAppointmentForm();
+            Form userCreateAppointmentForm = new UserMenuCreateAppointmentForm(LoggedSession);
             userCreateAppointmentForm.ShowDialog();
             this.Close();
         }
