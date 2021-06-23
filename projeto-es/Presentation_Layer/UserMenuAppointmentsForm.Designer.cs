@@ -35,6 +35,8 @@ namespace projeto_es.Presentation_Layer
             this.atendAppointmentButton = new System.Windows.Forms.Button();
             this.cancelAppointmentButton = new System.Windows.Forms.Button();
             this.appointmentsListBox = new System.Windows.Forms.ListBox();
+            this.AppointmentIDlistBox = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // createPrescriptionButton
@@ -92,15 +94,36 @@ namespace projeto_es.Presentation_Layer
             this.appointmentsListBox.FormattingEnabled = true;
             this.appointmentsListBox.Location = new System.Drawing.Point(214, 105);
             this.appointmentsListBox.Name = "appointmentsListBox";
+            this.appointmentsListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.appointmentsListBox.Size = new System.Drawing.Size(377, 186);
             this.appointmentsListBox.TabIndex = 5;
             this.appointmentsListBox.SelectedIndexChanged += new System.EventHandler(this.appointmentsListBox_SelectedIndexChanged);
+            // 
+            // AppointmentIDlistBox
+            // 
+            this.AppointmentIDlistBox.FormattingEnabled = true;
+            this.AppointmentIDlistBox.Location = new System.Drawing.Point(607, 105);
+            this.AppointmentIDlistBox.Name = "AppointmentIDlistBox";
+            this.AppointmentIDlistBox.Size = new System.Drawing.Size(36, 186);
+            this.AppointmentIDlistBox.TabIndex = 6;
+            this.AppointmentIDlistBox.SelectedIndexChanged += new System.EventHandler(this.AppointmentIDlistBox_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(211, 74);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Select an appointment id";
             // 
             // UserMenuAppointmentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.AppointmentIDlistBox);
             this.Controls.Add(this.appointmentsListBox);
             this.Controls.Add(this.cancelAppointmentButton);
             this.Controls.Add(this.atendAppointmentButton);
@@ -123,5 +146,7 @@ namespace projeto_es.Presentation_Layer
         private System.Windows.Forms.Button atendAppointmentButton;
         private System.Windows.Forms.Button cancelAppointmentButton;
         private System.Windows.Forms.ListBox appointmentsListBox;
+        private System.Windows.Forms.ListBox AppointmentIDlistBox;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -46,7 +46,7 @@ namespace projeto_es.Models
         }
         public List<Appointment> GetsAppointmentsOfAClient(int AccountID)
         {
-            string GetAppointmentsOfAClient = $"SELECT `description` FROM appointment, clientaccount, account" +
+            string GetAppointmentsOfAClient = $"SELECT `description`, appointment.id, appointment.scheduled_time FROM appointment, clientaccount, account" +
                 $" WHERE appointment.ClientAccount_id = clientaccount.id && clientaccount.Account_id = account.id && account.id = {AccountID}";
 
             List<Appointment> ListOffAppointments = (List<Appointment>)this._conn.Query<Appointment>(GetAppointmentsOfAClient);
