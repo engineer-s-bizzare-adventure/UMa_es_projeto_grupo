@@ -39,14 +39,17 @@ namespace projeto_es.Presentation_Layer
             this.descriptionRichTextBox = new System.Windows.Forms.RichTextBox();
             this.addDescriptionRichBox = new System.Windows.Forms.Label();
             this.hourDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.StaffIDlistBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // staffListBox
             // 
             this.staffListBox.FormattingEnabled = true;
+            this.staffListBox.HorizontalScrollbar = true;
             this.staffListBox.Location = new System.Drawing.Point(183, 65);
             this.staffListBox.Name = "staffListBox";
-            this.staffListBox.Size = new System.Drawing.Size(413, 82);
+            this.staffListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.staffListBox.Size = new System.Drawing.Size(141, 82);
             this.staffListBox.TabIndex = 0;
             this.staffListBox.SelectedIndexChanged += new System.EventHandler(this.staffListBox_SelectedIndexChanged);
             // 
@@ -134,11 +137,21 @@ namespace projeto_es.Presentation_Layer
             this.hourDateTimePicker.Value = new System.DateTime(2021, 6, 21, 21, 44, 0, 0);
             this.hourDateTimePicker.ValueChanged += new System.EventHandler(this.hourDateTimePicker_ValueChanged);
             // 
+            // StaffIDlistBox
+            // 
+            this.StaffIDlistBox.FormattingEnabled = true;
+            this.StaffIDlistBox.Location = new System.Drawing.Point(342, 65);
+            this.StaffIDlistBox.Name = "StaffIDlistBox";
+            this.StaffIDlistBox.Size = new System.Drawing.Size(44, 82);
+            this.StaffIDlistBox.TabIndex = 13;
+            this.StaffIDlistBox.SelectedIndexChanged += new System.EventHandler(this.StaffIDlistBox_SelectedIndexChanged);
+            // 
             // UserMenuCreateAppointmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.StaffIDlistBox);
             this.Controls.Add(this.hourDateTimePicker);
             this.Controls.Add(this.addDescriptionRichBox);
             this.Controls.Add(this.descriptionRichTextBox);
@@ -169,5 +182,6 @@ namespace projeto_es.Presentation_Layer
         private System.Windows.Forms.RichTextBox descriptionRichTextBox;
         private System.Windows.Forms.Label addDescriptionRichBox;
         private System.Windows.Forms.DateTimePicker hourDateTimePicker;
+        private System.Windows.Forms.ListBox StaffIDlistBox;
     }
 }

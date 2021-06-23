@@ -32,7 +32,7 @@ namespace projeto_es.Presentation_Layer
             int ClientAccountid = NewAccountService.GetClientAccountId(LoggedSession.Account.Id);
             string formatedDate = dateTimePicker.Value.ToString("yyyy-MM-dd");
             string formatedHour = dateTimePicker.Value.ToString("yyyy-MM-dd HH:mm:ss");
-            int StaffAccountId = NewAccountService.GetStaffMembersID((int)staffListBox.SelectedItem);
+            int StaffAccountId = NewAccountService.GetStaffMembersID((int)StaffIDlistBox.SelectedItem);
 
             NewAppointment.CreateAppointment(new Appointment()
             {
@@ -53,8 +53,7 @@ namespace projeto_es.Presentation_Layer
             {
                 //staffListBox.Items.Add(string.Format("Name: {0} | ID: {1}", Staff.name, Staff.id));
                 staffListBox.Items.Add(Staff.name);
-                staffListBox.Items.Add(Staff.id);
-
+                StaffIDlistBox.Items.Add(Staff.id);
             }
         }
 
@@ -81,6 +80,11 @@ namespace projeto_es.Presentation_Layer
         private void staffListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
                 
+        }
+
+        private void StaffIDlistBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
