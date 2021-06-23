@@ -41,6 +41,18 @@ namespace projeto_es.Models
 
             return ListOfStaff;
         }
+        public int GetStaffMembersID(int PersonId)
+        {
+            string QueryGetStaffMembersID = "SELECT * " +
+                                             "FROM staffaccount, account, person " +
+                                             "WHERE staffaccount.Account_id = account.id " +
+                                             "&& account.Person_id = person.id" +
+                                             $"&& person.id ={PersonId}";
+
+            int StaffID = this._conn.Query<int>(QueryGetStaffMembersID).FirstOrDefault();
+
+            return StaffID;
+        }
         public Person GetUserDataFromAccount(string email)
         {
             string QueryUserData = $"SELECT * FROM clientaccount, account, person WHERE clientaccount.Account_id = account.id && account.Person_id = person.id && account.email= '{email}'";

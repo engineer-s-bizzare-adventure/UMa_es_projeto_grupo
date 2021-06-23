@@ -35,12 +35,12 @@ namespace projeto_es.Models
 
         }
 
-        public void CreateAppointment(Appointment Appointment, int ClientAccountId)
+        public void CreateAppointment(Appointment Appointment, int ClientAccountId, int StaffAccount)
         {
 
             string createAppointmentQuery = "INSERT INTO `appointment` " +
                                             "(`date`, `description`, `scheduled_time`, `StaffAccount_id`, `ClientAccount_id`) " +
-                                            $"VALUES('{Appointment.date}', '{Appointment.description}', '{Appointment.scheduled_time}', 1, {ClientAccountId})";
+                                            $"VALUES('{Appointment.date}', '{Appointment.description}', '{Appointment.scheduled_time}', {StaffAccount}, {ClientAccountId})";
             this._conn.Execute(createAppointmentQuery);
             //SELECT * FROM `staffaccount`, `account`, `person` WHERE staffaccount.Account_id = account.id && account.Person_id = person.id
         }
