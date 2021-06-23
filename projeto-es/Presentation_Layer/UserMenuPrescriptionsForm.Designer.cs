@@ -30,32 +30,20 @@ namespace projeto_es.Presentation_Layer
         private void InitializeComponent()
         {
             this.prescriptionsLabel = new System.Windows.Forms.Label();
-            this.appointmentsListBox = new System.Windows.Forms.ListBox();
             this.checkPrescriptionButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
+            this.prescriptionListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // prescriptionsLabel
             // 
             this.prescriptionsLabel.AutoSize = true;
             this.prescriptionsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prescriptionsLabel.Location = new System.Drawing.Point(340, 48);
+            this.prescriptionsLabel.Location = new System.Drawing.Point(343, 43);
             this.prescriptionsLabel.Name = "prescriptionsLabel";
             this.prescriptionsLabel.Size = new System.Drawing.Size(113, 20);
             this.prescriptionsLabel.TabIndex = 2;
             this.prescriptionsLabel.Text = "Prescriptions";
-            // 
-            // appointmentsListBox
-            // 
-            this.appointmentsListBox.FormattingEnabled = true;
-            this.appointmentsListBox.Items.AddRange(new object[] {
-            "Prescrição - Dr. Joao - 20:00 | 10/06/2021",
-            ""});
-            this.appointmentsListBox.Location = new System.Drawing.Point(216, 100);
-            this.appointmentsListBox.Name = "appointmentsListBox";
-            this.appointmentsListBox.Size = new System.Drawing.Size(377, 186);
-            this.appointmentsListBox.TabIndex = 6;
-            this.appointmentsListBox.SelectedIndexChanged += new System.EventHandler(this.appointmentsListBox_SelectedIndexChanged);
             // 
             // checkPrescriptionButton
             // 
@@ -78,17 +66,27 @@ namespace projeto_es.Presentation_Layer
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
+            // prescriptionListBox
+            // 
+            this.prescriptionListBox.FormattingEnabled = true;
+            this.prescriptionListBox.Location = new System.Drawing.Point(12, 76);
+            this.prescriptionListBox.Name = "prescriptionListBox";
+            this.prescriptionListBox.Size = new System.Drawing.Size(776, 251);
+            this.prescriptionListBox.TabIndex = 10;
+            this.prescriptionListBox.SelectedIndexChanged += new System.EventHandler(this.prescriptionListBox_SelectedIndexChanged);
+            // 
             // UserMenuPrescriptionsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.prescriptionListBox);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.checkPrescriptionButton);
-            this.Controls.Add(this.appointmentsListBox);
             this.Controls.Add(this.prescriptionsLabel);
             this.Name = "UserMenuPrescriptionsForm";
             this.Text = "UserMenuPrescriptionsForm";
+            this.Load += new System.EventHandler(this.UserMenuPrescriptionsForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,8 +95,8 @@ namespace projeto_es.Presentation_Layer
         #endregion
 
         private System.Windows.Forms.Label prescriptionsLabel;
-        private System.Windows.Forms.ListBox appointmentsListBox;
         private System.Windows.Forms.Button checkPrescriptionButton;
         private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.ListBox prescriptionListBox;
     }
 }
