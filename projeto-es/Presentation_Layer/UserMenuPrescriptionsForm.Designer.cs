@@ -33,6 +33,7 @@ namespace projeto_es.Presentation_Layer
             this.checkPrescriptionButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.prescriptionListBox = new System.Windows.Forms.ListBox();
+            this.prescriptionIDListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // prescriptionsLabel
@@ -69,17 +70,28 @@ namespace projeto_es.Presentation_Layer
             // prescriptionListBox
             // 
             this.prescriptionListBox.FormattingEnabled = true;
-            this.prescriptionListBox.Location = new System.Drawing.Point(12, 76);
+            this.prescriptionListBox.Location = new System.Drawing.Point(90, 76);
             this.prescriptionListBox.Name = "prescriptionListBox";
-            this.prescriptionListBox.Size = new System.Drawing.Size(776, 251);
+            this.prescriptionListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.prescriptionListBox.Size = new System.Drawing.Size(481, 251);
             this.prescriptionListBox.TabIndex = 10;
             this.prescriptionListBox.SelectedIndexChanged += new System.EventHandler(this.prescriptionListBox_SelectedIndexChanged);
+            // 
+            // prescriptionIDListBox
+            // 
+            this.prescriptionIDListBox.FormattingEnabled = true;
+            this.prescriptionIDListBox.Location = new System.Drawing.Point(577, 76);
+            this.prescriptionIDListBox.Name = "prescriptionIDListBox";
+            this.prescriptionIDListBox.Size = new System.Drawing.Size(120, 251);
+            this.prescriptionIDListBox.TabIndex = 11;
+            this.prescriptionIDListBox.SelectedIndexChanged += new System.EventHandler(this.prescriptionIDListBox_SelectedIndexChanged);
             // 
             // UserMenuPrescriptionsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.prescriptionIDListBox);
             this.Controls.Add(this.prescriptionListBox);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.checkPrescriptionButton);
@@ -98,5 +110,6 @@ namespace projeto_es.Presentation_Layer
         private System.Windows.Forms.Button checkPrescriptionButton;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.ListBox prescriptionListBox;
+        private System.Windows.Forms.ListBox prescriptionIDListBox;
     }
 }

@@ -16,9 +16,10 @@ namespace projeto_es
         [STAThread]
         static void Main()
         {
+            LoggedInSingleton loggedIn = LoggedInSingleton.GetInstance();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CredentialsForm());
+            Application.Run(new CredentialsForm(loggedIn));
         }
     }
 }

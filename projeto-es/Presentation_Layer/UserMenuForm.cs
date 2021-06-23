@@ -7,13 +7,13 @@ namespace projeto_es.Presentation_Layer
     public partial class UserMenuForm : Form
     {
 
-        public UserMenuForm(Session loggedSession)
+        public UserMenuForm(LoggedInSingleton loggedSingleton)
         {
             InitializeComponent();
-            LoggedSession = loggedSession;
+            LoggedSingleton = loggedSingleton;
         }
 
-        public Session LoggedSession { get; set;}
+        public LoggedInSingleton LoggedSingleton { get; set;}
         private void accountButton_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -32,7 +32,7 @@ namespace projeto_es.Presentation_Layer
 
         private void UserMenuForm_Load(object sender, EventArgs e)
         {
-            welcomeLabel.Text = "Welcome, " + LoggedSession.Person.name + " !";
+            welcomeLabel.Text = "Welcome, " + LoggedSingleton.Person.name + " !";
         }
 
         private void appointmentsButton_Click(object sender, EventArgs e)
@@ -41,10 +41,10 @@ namespace projeto_es.Presentation_Layer
 
             AppointmentService NewAppointmentService = new AppointmentService();
 
-            if(NewAppointmentService.CheckExistingAppointments(LoggedSession))
+            if(NewAppointmentService.CheckExistingAppointments(LoggedSingleton))
             {
                 this.Hide();
-                Form userShowAppointmentsForm = new UserMenuAppointmentsForm(LoggedSession);
+                Form userShowAppointmentsForm = new UserMenuAppointmentsForm(LoggedSingleton);
                 userShowAppointmentsForm.ShowDialog();
                 this.Show();
             }
@@ -52,7 +52,7 @@ namespace projeto_es.Presentation_Layer
             else
             {
                 this.Hide();
-                Form userHasNoAppointmentsForm = new UserMenuNoAppointmentsForm(LoggedSession);
+                Form userHasNoAppointmentsForm = new UserMenuNoAppointmentsForm(LoggedSingleton);
                 userHasNoAppointmentsForm.ShowDialog();
                 this.Show();
             }
@@ -62,7 +62,7 @@ namespace projeto_es.Presentation_Layer
         {
             //CHECK FOR PRESCRIPTIONS FIRST
             this.Hide();
-            Form userPrescriptionForm = new UserMenuPrescriptionsForm(LoggedSession);
+            Form userPrescriptionForm = new UserMenuPrescriptionsForm(LoggedSingleton);
             userPrescriptionForm.ShowDialog();
             this.Show();
         }

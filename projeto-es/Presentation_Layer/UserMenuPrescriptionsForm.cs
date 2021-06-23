@@ -1,25 +1,19 @@
-﻿using projeto_es.Models;
+﻿using projeto_es.Business_Layer;
+using projeto_es.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace projeto_es.Presentation_Layer
 {
     public partial class UserMenuPrescriptionsForm : Form
     {
-        public UserMenuPrescriptionsForm(Session session)
+        public UserMenuPrescriptionsForm(LoggedInSingleton loggedSingleton)
         {
             InitializeComponent();
-            LoggedSession = session;
+            LoggedSingleton = loggedSingleton;
         }
 
-        public Session LoggedSession { get; set; }
+        public LoggedInSingleton LoggedSingleton { get; set; }
 
         private void backButton_Click(object sender, EventArgs e)
         {
@@ -28,10 +22,15 @@ namespace projeto_es.Presentation_Layer
 
         private void checkPrescriptionButton_Click(object sender, EventArgs e)
         {
-            //SELECT A PRESCRIPTION FIRST
+            int selectedID = Convert.ToInt32(prescriptionIDListBox.SelectedItem.ToString());
+
+            PrescriptionService prescriptionService = new PrescriptionService();
+            Prescription fetchedPrescription = prescriptionService.GetPrescription(selectedID);
+            
+            
             this.Hide();
-            Form userCreateAppointmentForm = new UserMenuCheckPrescriptionForm();
-            userCreateAppointmentForm.ShowDialog();
+            Form userCreatePrescriptionForm = new UserMenuCheckPrescriptionForm(fetchedPrescription);
+            userCreatePrescriptionForm.ShowDialog();
             this.Close();
         }
 
@@ -39,19 +38,23 @@ namespace projeto_es.Presentation_Layer
         private void UserMenuPrescriptionsForm_Load(object sender, EventArgs e)
         {
             AccountService accountService = new AccountService();
-            var prescriptions = accountService.GetClientPrescriptions(LoggedSession.clientID);
+            var prescriptions = accountService.GetClientPrescriptions(LoggedSingleton.clientID);
 
             foreach (var prescription in prescriptions)
             {
                 prescriptionListBox.Items.Add(prescription.Name + " " + prescription.Description + " " + prescription.DatePrescribed);
-                //prescriptionListBox.Items.Add(prescription.Description);
-                //prescriptionListBox.Items.Add(prescription.DatePrescribed);
+                prescriptionIDListBox.Items.Add(prescription.Id);
             }
         }
 
         private void prescriptionListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void prescriptionIDListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

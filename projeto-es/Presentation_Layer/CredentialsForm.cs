@@ -1,4 +1,5 @@
-﻿using projeto_es.Presentation_Layer;
+﻿using projeto_es.Models;
+using projeto_es.Presentation_Layer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,15 +15,17 @@ namespace projeto_es
 {
     public partial class CredentialsForm : Form
     {
-        public CredentialsForm()
+        public CredentialsForm(LoggedInSingleton loggedInSingleton)
         {
             InitializeComponent();
+            LoggedSingleton = loggedInSingleton;
         }
+        private LoggedInSingleton LoggedSingleton { get; set; }
 
         private void loginButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form loginForm = new LoginForm();
+            Form loginForm = new LoginForm(LoggedSingleton);
             loginForm.ShowDialog();
             this.Show();
         }

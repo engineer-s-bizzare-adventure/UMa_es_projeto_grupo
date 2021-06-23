@@ -13,12 +13,12 @@ namespace projeto_es.Presentation_Layer
 {
     public partial class UserMenuNoAppointmentsForm : Form
     {
-        public UserMenuNoAppointmentsForm(Session loggedSession)
+        public UserMenuNoAppointmentsForm(LoggedInSingleton loggedSingleton)
         {
             InitializeComponent();
-            LoggedSession = loggedSession;
+            LoggedSingleton = loggedSingleton;
         }
-        public Session LoggedSession { get; set; }
+        public LoggedInSingleton LoggedSingleton { get; set; }
 
         private void backButton_Click(object sender, EventArgs e)
         {
@@ -28,7 +28,7 @@ namespace projeto_es.Presentation_Layer
         private void createAppointmentButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form userCreateAppointmentForm = new UserMenuCreateAppointmentForm(LoggedSession);
+            Form userCreateAppointmentForm = new UserMenuCreateAppointmentForm(LoggedSingleton);
             userCreateAppointmentForm.ShowDialog();
             this.Close();
         }

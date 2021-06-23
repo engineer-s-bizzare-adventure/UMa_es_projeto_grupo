@@ -31,7 +31,7 @@ namespace projeto_es.Presentation_Layer
         {
             this.backButton = new System.Windows.Forms.Button();
             this.prescriptionLabel = new System.Windows.Forms.Label();
-            this.prescriptionRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.prescriptionDetailsListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // backButton
@@ -54,23 +54,24 @@ namespace projeto_es.Presentation_Layer
             this.prescriptionLabel.TabIndex = 5;
             this.prescriptionLabel.Text = "Prescription Details";
             // 
-            // prescriptionRichTextBox
+            // prescriptionDetailsListBox
             // 
-            this.prescriptionRichTextBox.Location = new System.Drawing.Point(81, 125);
-            this.prescriptionRichTextBox.Name = "prescriptionRichTextBox";
-            this.prescriptionRichTextBox.Size = new System.Drawing.Size(641, 240);
-            this.prescriptionRichTextBox.TabIndex = 6;
-            this.prescriptionRichTextBox.Text = "Ayyy lmaaaao";
+            this.prescriptionDetailsListBox.FormattingEnabled = true;
+            this.prescriptionDetailsListBox.Location = new System.Drawing.Point(81, 108);
+            this.prescriptionDetailsListBox.Name = "prescriptionDetailsListBox";
+            this.prescriptionDetailsListBox.Size = new System.Drawing.Size(631, 290);
+            this.prescriptionDetailsListBox.TabIndex = 6;
+            this.prescriptionDetailsListBox.SelectedIndexChanged += new System.EventHandler(this.prescriptionDetailsListBox_SelectedIndexChanged);
             // 
-            // UserMenuCheckPrecription
+            // UserMenuCheckPrescriptionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.prescriptionRichTextBox);
+            this.Controls.Add(this.prescriptionDetailsListBox);
             this.Controls.Add(this.prescriptionLabel);
             this.Controls.Add(this.backButton);
-            this.Name = "UserMenuCheckPrecription";
+            this.Name = "UserMenuCheckPrescriptionForm";
             this.Text = "UserMenuCheckPrecription";
             this.Load += new System.EventHandler(this.UserMenuCheckPrecription_Load);
             this.ResumeLayout(false);
@@ -82,6 +83,6 @@ namespace projeto_es.Presentation_Layer
 
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label prescriptionLabel;
-        private System.Windows.Forms.RichTextBox prescriptionRichTextBox;
+        private System.Windows.Forms.ListBox prescriptionDetailsListBox;
     }
 }

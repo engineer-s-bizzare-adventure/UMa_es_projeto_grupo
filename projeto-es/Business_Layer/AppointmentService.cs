@@ -19,13 +19,13 @@ namespace projeto_es.Models
             _conn = new MySqlConnection(_connectionString);
         }
 
-        public bool CheckExistingAppointments(Session session)
+        public bool CheckExistingAppointments(LoggedInSingleton loggedSingleton)
         {
-            string checkExistingAppointmentsQuery = "SELECT `description` FROM `appointment`,`clientaccount` , `account` WHERE appointment.ClientAccount_id = clientaccount.id && clientaccount.Account_id = account.id && account.id = " + $"{session.Account.Id}";
+            string checkExistingAppointmentsQuery = "SELECT `description` FROM `appointment`,`clientaccount` , `account` WHERE appointment.ClientAccount_id = clientaccount.id && clientaccount.Account_id = account.id && account.id = " + $"{loggedSingleton.Account.Id}";
 
             var count = this._conn.Query(checkExistingAppointmentsQuery);
 
-            Console.WriteLine(session.Account.Id);
+            Console.WriteLine(loggedSingleton.Account.Id);
 
             if (count.Count() > 0)
             {

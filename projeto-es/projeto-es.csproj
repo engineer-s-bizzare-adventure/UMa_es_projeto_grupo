@@ -94,6 +94,7 @@
   <ItemGroup>
     <Compile Include="Business_Layer\IBuilderRegisterAccount.cs" />
     <Compile Include="Business_Layer\ItemService.cs" />
+    <Compile Include="Business_Layer\PrescriptionService.cs" />
     <Compile Include="DbContext.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Business_Layer\AccountService.cs" />
@@ -103,6 +104,7 @@
     <Compile Include="Models\ClientAccount.cs" />
     <Compile Include="Business_Layer\ClientAccountService.cs" />
     <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\LoggedInSingleton.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Business_Layer\PersonService.cs" />
     <Compile Include="Models\Prescription.cs" />
@@ -113,12 +115,6 @@
     </Compile>
     <Compile Include="Presentation_Layer\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentation_Layer\StaffMenuCreateAppointment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation_Layer\StaffMenuCreateAppointment.Designer.cs">
-      <DependentUpon>StaffMenuCreateAppointment.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation_Layer\StaffMenuCreateAppointment.cs">
       <SubType>Form</SubType>
@@ -196,9 +192,6 @@
     </Compile>
     <EmbeddedResource Include="Presentation_Layer\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation_Layer\StaffMenuCreateAppointment.resx">
-      <DependentUpon>StaffMenuCreateAppointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation_Layer\StaffMenuCreateAppointment.resx">
       <DependentUpon>StaffMenuCreateAppointment.cs</DependentUpon>

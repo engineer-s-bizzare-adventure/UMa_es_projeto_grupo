@@ -6,14 +6,18 @@ namespace projeto_es.Presentation_Layer
 {
     public partial class LoginForm : Form
     {
-        public LoginForm()
+        public LoginForm(LoggedInSingleton loggedSingleton)
         {
             InitializeComponent();
+            LoggedSingleton = loggedSingleton;
         }
+
+        private LoggedInSingleton LoggedSingleton { get; set; }
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
             AccountService accountService = new AccountService();
+            // Conta
             Account account = accountService.FetchAccount(emailTextBox.Text, passwordTextBox.Text);
 
             if (account == null)
@@ -21,13 +25,15 @@ namespace projeto_es.Presentation_Layer
                 MessageBox.Show("Error logging in! Check details.");
                 return;
             }
-
+            // Pessoa 
             Person personAssociatedToAccount = accountService.GetUserDataFromAccount(account.Email);
-            Session accountSession = new Session(account, personAssociatedToAccount);
-            accountSession.clientID = accountService.GetClientAccountId(account.Id);
-
+            //Session accountSession = new Session(account, personAssociatedToAccount
+            LoggedSingleton.clientID = accountService.GetClientAccountId(account.Id);
+            LoggedSingleton.Account = account;
+            LoggedSingleton.Person = personAssociatedToAccount;
+                
             this.Hide();
-            Form userMenuForm = new UserMenuForm(accountSession);
+            Form userMenuForm = new UserMenuForm(LoggedSingleton);
             userMenuForm.ShowDialog();
             this.DialogResult = DialogResult.OK;
         }

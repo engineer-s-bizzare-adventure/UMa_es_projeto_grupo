@@ -14,12 +14,13 @@ namespace projeto_es.Presentation_Layer
     public partial class UserMenuCreateAppointmentForm : Form
     {
         AccountService NewAccountService = new AccountService();
-        public UserMenuCreateAppointmentForm(Session loggedSession)
+        public UserMenuCreateAppointmentForm(LoggedInSingleton loggedSingleton)
         {
             InitializeComponent();
-            LoggedSession = loggedSession;
+            LoggedSingleton = loggedSingleton;
         }
-        public Session LoggedSession { get; set; }
+
+        public LoggedInSingleton LoggedSingleton { get; set; }
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -29,7 +30,7 @@ namespace projeto_es.Presentation_Layer
         {
  
             AppointmentService NewAppointment = new AppointmentService();
-            uint ClientAccountid = (uint)NewAccountService.GetClientAccountId(LoggedSession.Account.Id);
+            uint ClientAccountid = (uint)NewAccountService.GetClientAccountId(LoggedSingleton.Account.Id);
             string formatedDate = dateTimePicker.Value.ToString("yyyy-MM-dd");
             string formatedHour = dateTimePicker.Value.ToString("yyyy-MM-dd HH:mm:ss");
             
