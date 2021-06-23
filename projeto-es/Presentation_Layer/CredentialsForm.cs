@@ -56,5 +56,11 @@ namespace projeto_es
         {
             Application.Exit();
         }
+
+        public void ShowMe(MainMenuStaff mmStaff)
+        {
+            mmStaff.Close();
+            Show();
+        }
     }
 }

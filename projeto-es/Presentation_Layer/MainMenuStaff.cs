@@ -18,7 +18,7 @@ namespace projeto_es.Presentation_Layer
         private string _nameUser;
         private List<string> _prescriptionList;
         private List<string> _appointmentsList;
-        private static bool _control = false;
+        private static bool _control;
         private CredentialsForm credencials;
         public MainMenuStaff(string userName, CredentialsForm credencialsForm)
         {
@@ -27,22 +27,22 @@ namespace projeto_es.Presentation_Layer
             _nameUser = userName;
             _prescriptionList = new List<string>();
             _appointmentsList = new List<string>();
-            _appointmentsList.Add("Tudo");
-            _appointmentsList.Add("Lala");
+            _prescriptionList.Add("ALL things");
             Label_info.Visible = false;
+            _control = false;
             /*
              * Ligar á base de dados nesta parte do código
              */
+
         }
 
         private void btn_logout_Click(object sender, EventArgs e)
         {
-            var dialogResult = MessageBox.Show(@"Do you want exit the account?", @"Exiting!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var dialogResult = MessageBox.Show($@"Deseja sair da sua conta, {_nameUser}?", @"Saíndo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                Hide();
-                var getOut = new CredentialsForm();
-                getOut.ShowDialog();
+                _control = true;
+                credencials.ShowMe(this);
             }
         }
 
@@ -54,9 +54,9 @@ namespace projeto_es.Presentation_Layer
             btn_createPrescription.Visible = state;
             btn_back.Visible = !state;
             Label_saudacao.Location = state ? new Point(49, 59) : new Point(350, 9);
-            Label_info.Location = state ? new Point(51, 228) : new Point(51, 59);
+            //Label_info.Location = state ? new Point(51, 228) : new Point(51, 59);
             Label_saudacao.Text = state ? $"Hello, {_nameUser}" : isAppointment ? "Appointment List" : "Prescription List";
-            Label_info.Visible = !state;
+            //Label_info.Visible = !state;
         }
 
         private void btn_view_prescriptions_Click(object sender, EventArgs e)
@@ -65,11 +65,12 @@ namespace projeto_es.Presentation_Layer
             {
                 Label_info.Text = @"Voçê não tem prescrições no momento!";
                 Label_info.ForeColor = Color.Red;
+                Label_info.Visible = true;
             }
             else
             {
                 nextStep(false, false);
-                Label_info.Text = takeTheInformation(false);
+                takeTheInformation(false);
                 Label_info.ForeColor = Color.Black;
             }
             Label_info.Visible = true;
@@ -82,25 +83,27 @@ namespace projeto_es.Presentation_Layer
             {
                 Label_info.Text = @"Neste momento, voçê não tem compromissos";
                 Label_info.ForeColor = Color.Red;
+                Label_info.ForeColor = Color.Black;
             }
             else
             {
                 nextStep(true, false);
-                Label_info.Text = takeTheInformation(true);
+                takeTheInformation(true);
                 Label_info.ForeColor = Color.Black;
             }
             Label_info.Visible = true;
         }
 
-        private string takeTheInformation(bool appointment)
+        private void takeTheInformation(bool appointment)
         {
             var informationList = appointment ? _appointmentsList : _prescriptionList; 
-            string informationText = "";
             for (int infoIndex = 0; infoIndex < informationList.Count; infoIndex++)
             {
-                informationText += informationList[infoIndex] + "\n";
+                Label _label = new Label();
+                _label.Text = informationList[infoIndex];
+                this.Labels.Add(_label);
             }
-            return informationText;
+            configLabelALL();
         }
 
         private void MainMenuStaff_Load(object sender, EventArgs e)
@@ -119,6 +122,10 @@ namespace projeto_es.Presentation_Layer
                     _control = true;
                     Application.Exit();
                 }
+                else
+                {
+                    e.Cancel = true;
+                }
             }
         }
 
@@ -129,13 +136,17 @@ namespace projeto_es.Presentation_Layer
             {
                 pnl_prescription.Visible = false;
             }
+
+            foreach (var _labe in Labels)
+            {
+                _labe.Visible = false;
+            }
         }
 
         private void btn_createPrescription_Click(object sender, EventArgs e)
         {
             tb_name_utente.Text = "Nome Completo";
             area_descrição.Text = "Descrição da prescrição";
-            
             pnl_prescription.Visible = true;
             btn_back.Visible = true;
         }
@@ -162,5 +173,23 @@ namespace projeto_es.Presentation_Layer
         {
             tb_name_utente.Text = "";
         }
+
+        // A ser editado -------------------------
+        private List<Label> Labels = new List<Label>();
+
+        public void configLabelALL()
+        {
+            for (int lab = 0; lab < Labels.Count; lab++)
+            {
+                this.Labels[lab].AutoSize = true;
+                this.Labels[lab].Font = new Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.Labels[lab].Name = $"label_name_utente {lab}";
+                this.Labels[lab].Location = new Point(29, 39 + 5 * lab + 1);
+                this.Labels[lab].Size = new Size(111, 19);
+                this.Labels[lab].TabIndex = 0;
+                this.Labels[lab].ForeColor = Color.Black;
+            }
+        }
+
     }
 }

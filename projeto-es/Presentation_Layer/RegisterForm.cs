@@ -15,9 +15,8 @@ namespace projeto_es
         private CredentialsForm credentialsForm_;
         public RegisterForm(CredentialsForm credentials)
         {
-            credentialsForm_ = credentials;
             InitializeComponent();
-            credentialsForm_.Close();
+            credentialsForm_ = credentials;
         }
 
         private void backButton_Click(object sender, EventArgs e)

@@ -96,9 +96,9 @@ namespace projeto_es
             this.b.BackColor = System.Drawing.Color.White;
             this.b.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("b.BackgroundImage")));
             this.b.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.b.Location = new System.Drawing.Point(444, 91);
+            this.b.Location = new System.Drawing.Point(444, 90);
             this.b.Name = "b";
-            this.b.Size = new System.Drawing.Size(28, 19);
+            this.b.Size = new System.Drawing.Size(28, 20);
             this.b.TabIndex = 8;
             this.b.UseVisualStyleBackColor = false;
             this.b.MouseDown += new System.Windows.Forms.MouseEventHandler(this.view_password);

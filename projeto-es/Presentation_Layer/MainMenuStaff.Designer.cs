@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Drawing.Text;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 
 namespace projeto_es.Presentation_Layer
@@ -21,6 +22,7 @@ namespace projeto_es.Presentation_Layer
             {
                 components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 
@@ -49,10 +51,7 @@ namespace projeto_es.Presentation_Layer
             this.tb_name_utente = new System.Windows.Forms.TextBox();
             this.label_description = new System.Windows.Forms.Label();
             this.label_name_utente = new System.Windows.Forms.Label();
-            this.panel_detalhes = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnl_prescription.SuspendLayout();
-            this.panel_detalhes.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_view_prescriptions
@@ -246,30 +245,11 @@ namespace projeto_es.Presentation_Layer
             this.label_name_utente.TabIndex = 0;
             this.label_name_utente.Text = "Nome do utente";
             // 
-            // panel_detalhes
-            // 
-            this.panel_detalhes.Controls.Add(this.label1);
-            this.panel_detalhes.Location = new System.Drawing.Point(349, 59);
-            this.panel_detalhes.Name = "panel_detalhes";
-            this.panel_detalhes.Size = new System.Drawing.Size(471, 319);
-            this.panel_detalhes.TabIndex = 9;
-            this.panel_detalhes.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            // 
             // MainMenuStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 450);
-            this.Controls.Add(this.panel_detalhes);
             this.Controls.Add(this.pnl_prescription);
             this.Controls.Add(this.btn_createPrescription);
             this.Controls.Add(this.btn_back);
@@ -286,12 +266,11 @@ namespace projeto_es.Presentation_Layer
             this.Load += new System.EventHandler(this.MainMenuStaff_Load);
             this.pnl_prescription.ResumeLayout(false);
             this.pnl_prescription.PerformLayout();
-            this.panel_detalhes.ResumeLayout(false);
-            this.panel_detalhes.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
+
         #endregion
 
         private System.Windows.Forms.Button btn_view_prescriptions;
@@ -306,19 +285,13 @@ namespace projeto_es.Presentation_Layer
         private System.Windows.Forms.Label label_description;
         private System.Windows.Forms.TextBox tb_name_utente;
         private System.Windows.Forms.RichTextBox area_descrição;
-        private List<System.Windows.Forms.LinkLabel> linkLabels;
-
-        public List<System.Windows.Forms.LinkLabel> GetListLinkLabels()
-        {
-            return linkLabels;
-        }
+        
 
         private Button btn_confirm_prescription;
         private RadioButton RB_exercise;
         private RadioButton RB_treatment;
         private RadioButton RB_Medican;
         private Label kind_prescription;
-        private Panel panel_detalhes;
-        private Label label1;
     }
 }
+    
