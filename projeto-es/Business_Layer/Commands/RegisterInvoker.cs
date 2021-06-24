@@ -9,10 +9,10 @@ namespace projeto_es.Business_Layer.Commands
             _command = command;
         }
 
-        public override void Execute() 
-        {
-            return _command.Execute();
-        }
+        //public override void Execute() 
+        //{
+        //    return _command.Execute();
+        //}
 
     }
 }

@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace projeto_es.Presentation_Layer
 {
-    partial class StaffMenuCreateAppointment
+    partial class StaffMenuCreatePrescription
     {
         /// <summary>
         /// Required designer variable.

@@ -8,8 +8,9 @@ namespace projeto_es.Business_Layer.Commands
             _registerReceiver = registerReceiver;
         }
 
-        public override void Execute() {
-            return _registerReceiver.CreateAccount(email, password);
+        public override void Execute()
+        {
+            //return _registerReceiver.CreateAccount(email, password);
         }
 
     }

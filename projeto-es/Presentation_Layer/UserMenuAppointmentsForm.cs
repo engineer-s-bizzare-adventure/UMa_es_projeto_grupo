@@ -146,7 +146,10 @@ namespace projeto_es.Presentation_Layer
         {
             if (checkAvailabilityAttend())
             {
-                Console.WriteLine("Ayyyy lmaaao");
+                if (LoggedSingleton.Role=="Client")
+                {
+
+                }
             }
         }
 

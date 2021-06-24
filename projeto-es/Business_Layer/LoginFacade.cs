@@ -46,17 +46,20 @@ namespace projeto_es.Business_Layer
                 {
                     LoggedSingleton.Account = account;
                     LoggedSingleton.Person = staffAssociatedToAccount;
+                    LoggedSingleton.Role = "Staff";
                 }
                 else
                 {
                     LoggedSingleton.Account = account;
                     LoggedSingleton.Person = adminAssociatedToAccount;
+                    LoggedSingleton.Role = "Admin";
                 }
             }
             else
             {
                 LoggedSingleton.Account = account;
                 LoggedSingleton.Person = personAssociatedToAccount;
+                LoggedSingleton.Role = "Cliente";
             }
         }
     }
