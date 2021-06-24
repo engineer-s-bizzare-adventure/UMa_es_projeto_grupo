@@ -17,7 +17,7 @@ namespace projeto_es.Models
         {
             _conn = new MySqlConnection(_connectionString);
         }
-        public void CreateClientAccount(ClientAccount ClientAccount)
+        public void CreateClientAccount()
         {
             string sql = $"INSERT INTO `clientaccount`(`Account_id`) VALUES (LAST_INSERT_ID())";
             this._conn.Execute(sql);

@@ -46,7 +46,7 @@ namespace projeto_es
                 Email = emailTextBox.Text,
                 Password = passwordTextBox.Text,
             });
-            NewClientAccountService.CreateClientAccount(new ClientAccount());
+            NewClientAccountService.CreateClientAccount();
             this.DialogResult = DialogResult.OK;
         }
 
