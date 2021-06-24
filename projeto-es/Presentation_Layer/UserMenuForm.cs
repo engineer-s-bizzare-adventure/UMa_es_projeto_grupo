@@ -40,8 +40,13 @@ namespace projeto_es.Presentation_Layer
             //CHECK FOR APPOINTMENTS FIRST 
 
             AppointmentService NewAppointmentService = new AppointmentService();
-
-            if(NewAppointmentService.CheckExistingAppointments(LoggedSingleton))
+            var NumberOfAppointment = NewAppointmentService.CheckExistingAppointments(LoggedSingleton);
+            if (LoggedSingleton.Role == "Staff")
+            {
+                NumberOfAppointment = NewAppointmentService.CheckExistingAppointmentsStaff(LoggedSingleton);
+                    
+            }
+            if(NumberOfAppointment)
             {
                 this.Hide();
                 Form userShowAppointmentsForm = new UserMenuAppointmentsForm(LoggedSingleton);

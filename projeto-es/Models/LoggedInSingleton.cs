@@ -12,7 +12,7 @@ namespace projeto_es.Models
         public int clientID = 0;
         public int staffID = 0;
         public int adminID = 0;
-        public string Role;
+        public string Role = "";
 
 
         private LoggedInSingleton(Account account = null, Person person = null)
