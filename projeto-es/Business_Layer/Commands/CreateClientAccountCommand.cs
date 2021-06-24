@@ -1,7 +1,4 @@
 namespace projeto_es.Business_Layer.Commands
-
-
-
 {
     public class CreateClientAccountCommand : RegisterCommand 
     {
@@ -11,8 +8,8 @@ namespace projeto_es.Business_Layer.Commands
             _registerReceiver = registerReceiver;
         }
 
-        public override void Execute() {
-            return _registerReceiver.CreateClientAccount();
+        public override void ExecuteCommand() {
+            _registerReceiver.CreateClientAccount();
         }
 
     }

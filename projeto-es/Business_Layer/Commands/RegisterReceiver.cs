@@ -16,7 +16,7 @@ namespace projeto_es.Business_Layer.Commands
 
         public void RegisterPerson(string name, int age, string address) 
         {
-            string sql = $"INSERT INTO person(name, age, address) VALUES ('{person.name}', {person.age}, '{person.address}')";
+            string sql = $"INSERT INTO person(name, age, address) VALUES ('{name}', {age}, '{address}')";
             this._conn.Execute(sql);
         }
 

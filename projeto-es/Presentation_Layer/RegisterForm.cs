@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using projeto_es.Business_Layer.Commands;
 using projeto_es.Models;
 
 namespace projeto_es
@@ -31,22 +32,36 @@ namespace projeto_es
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            PersonService NewPerson = new PersonService();
-            AccountService newRegisteredAccount = new AccountService();
-            ClientAccountService NewClientAccountService = new ClientAccountService();
+            //PersonService NewPerson = new PersonService();
+            //AccountService newRegisteredAccount = new AccountService();
+            //ClientAccountService NewClientAccountService = new ClientAccountService();
 
-            NewPerson.InsertPerson(new Person()
-            {
-                name = accountName.Text,
-                age = Int16.Parse(accountAge.Text),
-                address = accountAddress.Text,
-            });
-            newRegisteredAccount.CreateAccount(new Account()
-            {
-                Email = emailTextBox.Text,
-                Password = passwordTextBox.Text,
-            });
-            NewClientAccountService.CreateClientAccount();
+            //NewPerson.InsertPerson(new Person()
+            //{
+            //    name = accountName.Text,
+            //    age = Int16.Parse(accountAge.Text),
+            //    address = accountAddress.Text,
+            //});
+            //newRegisteredAccount.CreateAccount(new Account()
+            //{
+            //    Email = emailTextBox.Text,
+            //    Password = passwordTextBox.Text,
+            //});
+            //NewClientAccountService.CreateClientAccount();
+            RegisterReceiver register = new RegisterReceiver();
+            var registerPersonCommand = new RegisterPersonCommand(register, accountName.Text, Int16.Parse(accountAge.Text), accountAddress.Text);
+            var createAccountCommand = new CreateAccountCommand(register, emailTextBox.Text, passwordTextBox.Text);
+            var createClientCommand = new CreateClientAccountCommand(register);
+            RegisterInvoker invoker = new RegisterInvoker();
+
+            invoker.SetCommand(registerPersonCommand);
+            invoker.ExecuteCommand();
+            invoker.SetCommand(createAccountCommand);
+            invoker.ExecuteCommand();
+            invoker.SetCommand(createClientCommand);
+            invoker.ExecuteCommand();
+
+
             this.DialogResult = DialogResult.OK;
         }
 
