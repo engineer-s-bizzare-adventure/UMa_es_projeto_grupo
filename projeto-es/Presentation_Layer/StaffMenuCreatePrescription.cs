@@ -72,5 +72,10 @@ namespace projeto_es.Presentation_Layer
         {
 
         }
+
+        private void area_descrição_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

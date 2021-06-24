@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using projeto_es.Business_Layer;
 using projeto_es.Models;
 
 namespace projeto_es.Presentation_Layer
@@ -15,6 +16,7 @@ namespace projeto_es.Presentation_Layer
     {
         public LoggedInSingleton LoggedSingleton { get; set; }
         AppointmentService appointmentService = new AppointmentService();
+        PrescriptionService prescriptionService = new PrescriptionService();
         public UserMenuAppointmentsForm(LoggedInSingleton loggedSingleton)
         {
             InitializeComponent();
@@ -90,7 +92,16 @@ namespace projeto_es.Presentation_Layer
 
             DateTime localDate = DateTime.Now;
 
-            var Appointments = appointmentService.GetsAppointmentsOfAClient(LoggedSingleton.Account.Id);
+            var Appointments = ;
+
+            if (LoggedSingleton.Role=="Staff")
+            {
+                 Appointments = appointmentService.GetsAppointmentsOfAStaff(LoggedSingleton.Account.Id);
+            }
+            else
+            {
+                Appointments = appointmentService.GetsAppointmentsOfAClient(LoggedSingleton.Account.Id);
+            }
 
 
             foreach (var appointment in Appointments)
@@ -150,6 +161,10 @@ namespace projeto_es.Presentation_Layer
                 {
 
                 }
+                else
+                {
+
+                }
             }
         }
 
@@ -171,5 +186,6 @@ namespace projeto_es.Presentation_Layer
         {
 
         }
+
     }
 }

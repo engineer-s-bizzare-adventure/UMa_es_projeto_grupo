@@ -139,6 +139,7 @@ namespace projeto_es.Presentation_Layer
             this.area_descrição.Size = new System.Drawing.Size(580, 192);
             this.area_descrição.TabIndex = 3;
             this.area_descrição.Text = "Descrição da Prescrição";
+            this.area_descrição.TextChanged += new System.EventHandler(this.area_descrição_TextChanged);
             // 
             // tb_name_utente
             // 
@@ -172,7 +173,7 @@ namespace projeto_es.Presentation_Layer
             this.label_name_utente.TabIndex = 0;
             this.label_name_utente.Text = "Nome do utente";
             // 
-            // StaffMenuCreateAppointment
+            // StaffMenuCreatePrescription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -180,7 +181,7 @@ namespace projeto_es.Presentation_Layer
             this.Controls.Add(this.pnl_prescription);
             this.Controls.Add(this.btn_back);
             this.MaximizeBox = false;
-            this.Name = "StaffMenuCreateAppointment";
+            this.Name = "StaffMenuCreatePrescription";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Make prescription";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.btn_close);
