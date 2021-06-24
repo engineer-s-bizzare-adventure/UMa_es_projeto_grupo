@@ -1,12 +1,5 @@
 ﻿using projeto_es.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace projeto_es.Presentation_Layer
@@ -61,7 +54,6 @@ namespace projeto_es.Presentation_Layer
            
             foreach (var Staff in StaffMembers)
             {
-                //staffListBox.Items.Add(string.Format("Name: {0} | ID: {1}", Staff.name, Staff.id));
                 staffListBox.Items.Add(Staff.name);
                 StaffIDlistBox.Items.Add(Staff.id);
             }

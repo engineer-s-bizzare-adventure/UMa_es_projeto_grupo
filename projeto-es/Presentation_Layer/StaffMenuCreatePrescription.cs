@@ -1,16 +1,6 @@
 ﻿using projeto_es.Business_Layer;
 using projeto_es.Models;
 using System;
-using System.CodeDom.Compiler;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace projeto_es.Presentation_Layer
@@ -18,13 +8,11 @@ namespace projeto_es.Presentation_Layer
     public partial class StaffMenuCreatePrescription : Form
     {
         public LoggedInSingleton LoggedSingleton { get; set; }
-        public int AppointmentID { get; }
 
         public StaffMenuCreatePrescription(LoggedInSingleton loggedSingleton)
         {
             InitializeComponent();
             LoggedSingleton = loggedSingleton;
-            //AppointmentID = appointmentID;
         }
 
         private void btn_close(object sender, FormClosingEventArgs e)

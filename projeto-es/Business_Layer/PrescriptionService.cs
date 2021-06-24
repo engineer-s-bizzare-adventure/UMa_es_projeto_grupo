@@ -1,10 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using Dapper;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using projeto_es.Models;
 
 namespace projeto_es.Business_Layer

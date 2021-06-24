@@ -1,8 +1,7 @@
 using Dapper;
 using MySql.Data.MySqlClient;
+
 namespace projeto_es.Business_Layer.Commands
-
-
 {
     public class RegisterReceiver
     {

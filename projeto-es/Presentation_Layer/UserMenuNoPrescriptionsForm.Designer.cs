@@ -74,6 +74,7 @@ namespace projeto_es.Presentation_Layer
             this.Controls.Add(this.noPrecriptionsLabel);
             this.Name = "UserMenuNoPrescriptionsForm";
             this.Text = "UserMenuNoPrescriptions";
+            this.Load += new System.EventHandler(this.UserMenuNoPrescriptionsForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

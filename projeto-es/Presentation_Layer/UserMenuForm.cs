@@ -37,15 +37,16 @@ namespace projeto_es.Presentation_Layer
 
         private void appointmentsButton_Click(object sender, EventArgs e)
         {
-            //CHECK FOR APPOINTMENTS FIRST 
 
             AppointmentService NewAppointmentService = new AppointmentService();
             var NumberOfAppointment = NewAppointmentService.CheckExistingAppointments(LoggedSingleton);
+
             if (LoggedSingleton.Role == "Staff")
             {
                 NumberOfAppointment = NewAppointmentService.CheckExistingAppointmentsStaff(LoggedSingleton);
                     
             }
+
             if(NumberOfAppointment)
             {
                 this.Hide();
@@ -65,7 +66,6 @@ namespace projeto_es.Presentation_Layer
 
         private void prescriptionsButton_Click(object sender, EventArgs e)
         {
-            //CHECK FOR PRESCRIPTIONS FIRST
             this.Hide();
             Form userPrescriptionForm = new UserMenuPrescriptionsForm(LoggedSingleton);
             userPrescriptionForm.ShowDialog();
