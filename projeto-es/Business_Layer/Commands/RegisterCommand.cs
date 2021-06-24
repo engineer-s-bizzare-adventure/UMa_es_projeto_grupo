@@ -9,6 +9,6 @@ namespace projeto_es.Business_Layer.Commands
             this.receiver = receiver;
         }
 
-        public abstract void Execute();
+        public abstract void ExecuteCommand();
     }
 }
