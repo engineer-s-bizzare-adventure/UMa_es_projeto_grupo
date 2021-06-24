@@ -30,13 +30,24 @@ namespace projeto_es.Presentation_Layer
             {
                 LoginFacade login = new LoginFacade(LoggedSingleton);
                 login.Login(accountService, account, account.Email, account.Id);
-
             }
- 
-            this.Hide();
-            Form userMenuForm = new UserMenuForm(LoggedSingleton);
-            userMenuForm.ShowDialog();
-            this.DialogResult = DialogResult.OK;
+
+
+            if (LoggedSingleton.Role == "Admin")
+            {
+                this.Hide();
+                Form adminMenuForm = new AdminForm(LoggedSingleton);
+                adminMenuForm.ShowDialog();
+                this.DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                this.Hide();
+                Form userMenuForm = new UserMenuForm(LoggedSingleton);
+                userMenuForm.ShowDialog();
+                this.DialogResult = DialogResult.OK;
+            }
+
         }
 
         

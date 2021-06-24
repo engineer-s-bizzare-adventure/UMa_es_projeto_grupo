@@ -33,15 +33,26 @@ namespace projeto_es.Presentation_Layer
             this.manageStaffButton = new System.Windows.Forms.Button();
             this.appointmentHistoryButton = new System.Windows.Forms.Button();
             this.itemListButton = new System.Windows.Forms.Button();
-            this.dataGridHolder = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridHolder)).BeginInit();
+            this.addItem = new System.Windows.Forms.Button();
+            this.weightTextBox = new System.Windows.Forms.TextBox();
+            this.sessionTextBox = new System.Windows.Forms.TextBox();
+            this.treatTimeTextBox = new System.Windows.Forms.TextBox();
+            this.exerciseDurTextBox = new System.Windows.Forms.TextBox();
+            this.weightLabel = new System.Windows.Forms.Label();
+            this.sessionLabel = new System.Windows.Forms.Label();
+            this.treatmentLabel = new System.Windows.Forms.Label();
+            this.exerciseDurationLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.prescriptionIDLabel = new System.Windows.Forms.Label();
+            this.prescriptionTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // checkPrescriptionHistory
             // 
-            this.checkPrescriptionHistory.Location = new System.Drawing.Point(12, 41);
+            this.checkPrescriptionHistory.Location = new System.Drawing.Point(105, 12);
             this.checkPrescriptionHistory.Name = "checkPrescriptionHistory";
-            this.checkPrescriptionHistory.Size = new System.Drawing.Size(123, 23);
+            this.checkPrescriptionHistory.Size = new System.Drawing.Size(87, 23);
             this.checkPrescriptionHistory.TabIndex = 1;
             this.checkPrescriptionHistory.Text = "Prescription history";
             this.checkPrescriptionHistory.UseVisualStyleBackColor = true;
@@ -51,7 +62,7 @@ namespace projeto_es.Presentation_Layer
             // 
             this.manageStaffButton.Location = new System.Drawing.Point(12, 12);
             this.manageStaffButton.Name = "manageStaffButton";
-            this.manageStaffButton.Size = new System.Drawing.Size(123, 23);
+            this.manageStaffButton.Size = new System.Drawing.Size(87, 23);
             this.manageStaffButton.TabIndex = 2;
             this.manageStaffButton.Text = "Manage staff members";
             this.manageStaffButton.UseVisualStyleBackColor = true;
@@ -59,9 +70,9 @@ namespace projeto_es.Presentation_Layer
             // 
             // appointmentHistoryButton
             // 
-            this.appointmentHistoryButton.Location = new System.Drawing.Point(12, 70);
+            this.appointmentHistoryButton.Location = new System.Drawing.Point(292, 12);
             this.appointmentHistoryButton.Name = "appointmentHistoryButton";
-            this.appointmentHistoryButton.Size = new System.Drawing.Size(123, 23);
+            this.appointmentHistoryButton.Size = new System.Drawing.Size(87, 23);
             this.appointmentHistoryButton.TabIndex = 3;
             this.appointmentHistoryButton.Text = "Appointment history";
             this.appointmentHistoryButton.UseVisualStyleBackColor = true;
@@ -69,37 +80,147 @@ namespace projeto_es.Presentation_Layer
             // 
             // itemListButton
             // 
-            this.itemListButton.Location = new System.Drawing.Point(12, 99);
+            this.itemListButton.Location = new System.Drawing.Point(199, 12);
             this.itemListButton.Name = "itemListButton";
-            this.itemListButton.Size = new System.Drawing.Size(123, 23);
+            this.itemListButton.Size = new System.Drawing.Size(87, 23);
             this.itemListButton.TabIndex = 4;
             this.itemListButton.Text = "Prescribed item history";
             this.itemListButton.UseVisualStyleBackColor = true;
             this.itemListButton.Click += new System.EventHandler(this.itemListButton_Click);
             // 
-            // dataGridHolder
+            // addItem
             // 
-            this.dataGridHolder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridHolder.Location = new System.Drawing.Point(12, 128);
-            this.dataGridHolder.Name = "dataGridHolder";
-            this.dataGridHolder.Size = new System.Drawing.Size(460, 321);
-            this.dataGridHolder.TabIndex = 5;
-            this.dataGridHolder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridHolder_CellContentClick);
+            this.addItem.Location = new System.Drawing.Point(144, 102);
+            this.addItem.Name = "addItem";
+            this.addItem.Size = new System.Drawing.Size(123, 23);
+            this.addItem.TabIndex = 6;
+            this.addItem.Text = "AddItem";
+            this.addItem.UseVisualStyleBackColor = true;
+            this.addItem.Click += new System.EventHandler(this.addItem_Click);
+            // 
+            // weightTextBox
+            // 
+            this.weightTextBox.Location = new System.Drawing.Point(154, 131);
+            this.weightTextBox.Name = "weightTextBox";
+            this.weightTextBox.Size = new System.Drawing.Size(100, 20);
+            this.weightTextBox.TabIndex = 7;
+            // 
+            // sessionTextBox
+            // 
+            this.sessionTextBox.Location = new System.Drawing.Point(154, 160);
+            this.sessionTextBox.Name = "sessionTextBox";
+            this.sessionTextBox.Size = new System.Drawing.Size(100, 20);
+            this.sessionTextBox.TabIndex = 8;
+            // 
+            // treatTimeTextBox
+            // 
+            this.treatTimeTextBox.Location = new System.Drawing.Point(154, 189);
+            this.treatTimeTextBox.Name = "treatTimeTextBox";
+            this.treatTimeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.treatTimeTextBox.TabIndex = 9;
+            // 
+            // exerciseDurTextBox
+            // 
+            this.exerciseDurTextBox.Location = new System.Drawing.Point(154, 217);
+            this.exerciseDurTextBox.Name = "exerciseDurTextBox";
+            this.exerciseDurTextBox.Size = new System.Drawing.Size(100, 20);
+            this.exerciseDurTextBox.TabIndex = 10;
+            // 
+            // weightLabel
+            // 
+            this.weightLabel.AutoSize = true;
+            this.weightLabel.Location = new System.Drawing.Point(97, 134);
+            this.weightLabel.Name = "weightLabel";
+            this.weightLabel.Size = new System.Drawing.Size(44, 13);
+            this.weightLabel.TabIndex = 11;
+            this.weightLabel.Text = "Weight:";
+            // 
+            // sessionLabel
+            // 
+            this.sessionLabel.AutoSize = true;
+            this.sessionLabel.Location = new System.Drawing.Point(94, 167);
+            this.sessionLabel.Name = "sessionLabel";
+            this.sessionLabel.Size = new System.Drawing.Size(47, 13);
+            this.sessionLabel.TabIndex = 12;
+            this.sessionLabel.Text = "Session:";
+            // 
+            // treatmentLabel
+            // 
+            this.treatmentLabel.AutoSize = true;
+            this.treatmentLabel.Location = new System.Drawing.Point(57, 196);
+            this.treatmentLabel.Name = "treatmentLabel";
+            this.treatmentLabel.Size = new System.Drawing.Size(84, 13);
+            this.treatmentLabel.TabIndex = 13;
+            this.treatmentLabel.Text = "Treatment Time:";
+            // 
+            // exerciseDurationLabel
+            // 
+            this.exerciseDurationLabel.AutoSize = true;
+            this.exerciseDurationLabel.Location = new System.Drawing.Point(48, 224);
+            this.exerciseDurationLabel.Name = "exerciseDurationLabel";
+            this.exerciseDurationLabel.Size = new System.Drawing.Size(93, 13);
+            this.exerciseDurationLabel.TabIndex = 14;
+            this.exerciseDurationLabel.Text = "Exercise Duration:";
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(103, 250);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(38, 13);
+            this.nameLabel.TabIndex = 16;
+            this.nameLabel.Text = "Name:";
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Location = new System.Drawing.Point(154, 243);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nameTextBox.TabIndex = 15;
+            // 
+            // prescriptionIDLabel
+            // 
+            this.prescriptionIDLabel.AutoSize = true;
+            this.prescriptionIDLabel.Location = new System.Drawing.Point(62, 276);
+            this.prescriptionIDLabel.Name = "prescriptionIDLabel";
+            this.prescriptionIDLabel.Size = new System.Drawing.Size(79, 13);
+            this.prescriptionIDLabel.TabIndex = 18;
+            this.prescriptionIDLabel.Text = "Prescription ID:";
+            // 
+            // prescriptionTextBox
+            // 
+            this.prescriptionTextBox.Location = new System.Drawing.Point(154, 269);
+            this.prescriptionTextBox.Name = "prescriptionTextBox";
+            this.prescriptionTextBox.Size = new System.Drawing.Size(100, 20);
+            this.prescriptionTextBox.TabIndex = 17;
             // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 461);
-            this.Controls.Add(this.dataGridHolder);
+            this.ClientSize = new System.Drawing.Size(388, 322);
+            this.Controls.Add(this.prescriptionIDLabel);
+            this.Controls.Add(this.prescriptionTextBox);
+            this.Controls.Add(this.nameLabel);
+            this.Controls.Add(this.nameTextBox);
+            this.Controls.Add(this.exerciseDurationLabel);
+            this.Controls.Add(this.treatmentLabel);
+            this.Controls.Add(this.sessionLabel);
+            this.Controls.Add(this.weightLabel);
+            this.Controls.Add(this.exerciseDurTextBox);
+            this.Controls.Add(this.treatTimeTextBox);
+            this.Controls.Add(this.sessionTextBox);
+            this.Controls.Add(this.weightTextBox);
+            this.Controls.Add(this.addItem);
             this.Controls.Add(this.itemListButton);
             this.Controls.Add(this.appointmentHistoryButton);
             this.Controls.Add(this.manageStaffButton);
             this.Controls.Add(this.checkPrescriptionHistory);
             this.Name = "AdminForm";
             this.Text = "AdminForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridHolder)).EndInit();
+            this.Load += new System.EventHandler(this.AdminForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -108,6 +229,18 @@ namespace projeto_es.Presentation_Layer
         private System.Windows.Forms.Button manageStaffButton;
         private System.Windows.Forms.Button appointmentHistoryButton;
         private System.Windows.Forms.Button itemListButton;
-        private System.Windows.Forms.DataGridView dataGridHolder;
+        private System.Windows.Forms.Button addItem;
+        private System.Windows.Forms.TextBox weightTextBox;
+        private System.Windows.Forms.TextBox sessionTextBox;
+        private System.Windows.Forms.TextBox treatTimeTextBox;
+        private System.Windows.Forms.TextBox exerciseDurTextBox;
+        private System.Windows.Forms.Label weightLabel;
+        private System.Windows.Forms.Label sessionLabel;
+        private System.Windows.Forms.Label treatmentLabel;
+        private System.Windows.Forms.Label exerciseDurationLabel;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.Label prescriptionIDLabel;
+        private System.Windows.Forms.TextBox prescriptionTextBox;
     }
 }
