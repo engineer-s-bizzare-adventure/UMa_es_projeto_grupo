@@ -92,16 +92,16 @@ namespace projeto_es.Presentation_Layer
 
             DateTime localDate = DateTime.Now;
 
-            var Appointments = ;
+            var Appointments = appointmentService.GetsAppointmentsOfAClient(LoggedSingleton.Account.Id);
 
-            if (LoggedSingleton.Role=="Staff")
-            {
-                 Appointments = appointmentService.GetsAppointmentsOfAStaff(LoggedSingleton.Account.Id);
-            }
-            else
-            {
-                Appointments = appointmentService.GetsAppointmentsOfAClient(LoggedSingleton.Account.Id);
-            }
+            //if (LoggedSingleton.Role=="Staff")
+            //{
+            //     Appointments = appointmentService.GetsAppointmentsOfAStaff(LoggedSingleton.Account.Id);
+            //}
+            //else
+            //{
+            //    Appointments = appointmentService.GetsAppointmentsOfAClient(LoggedSingleton.Account.Id);
+            //}
 
 
             foreach (var appointment in Appointments)
@@ -113,14 +113,6 @@ namespace projeto_es.Presentation_Layer
                     DateTime toleranceAppointmentEarly = selectedAppointmentDate.AddMinutes(-10);
                     DateTime toleranceAppointmentLate = selectedAppointmentDate.AddMinutes(10);
 
-                    //Console.WriteLine("localdate: " + localDate);
-                    //Console.WriteLine("selecteddate: " + selectedAppointmentDate);
-
-                    //Console.WriteLine("selectedDate.Date: " + selectedAppointmentDate.Date);
-                    //Console.WriteLine("localDate.Date: " + localDate.Date);
-
-                    //Console.WriteLine("ToleranceEarly: " + toleranceAppointmentEarly);
-                    //Console.WriteLine("ToleranceLate: " + toleranceAppointmentLate);
 
 
                     if (selectedAppointmentDate.Date == localDate.Date)

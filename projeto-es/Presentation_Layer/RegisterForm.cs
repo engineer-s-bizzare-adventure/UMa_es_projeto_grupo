@@ -32,22 +32,6 @@ namespace projeto_es
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            //PersonService NewPerson = new PersonService();
-            //AccountService newRegisteredAccount = new AccountService();
-            //ClientAccountService NewClientAccountService = new ClientAccountService();
-
-            //NewPerson.InsertPerson(new Person()
-            //{
-            //    name = accountName.Text,
-            //    age = Int16.Parse(accountAge.Text),
-            //    address = accountAddress.Text,
-            //});
-            //newRegisteredAccount.CreateAccount(new Account()
-            //{
-            //    Email = emailTextBox.Text,
-            //    Password = passwordTextBox.Text,
-            //});
-            //NewClientAccountService.CreateClientAccount();
             RegisterReceiver register = new RegisterReceiver();
             var registerPersonCommand = new RegisterPersonCommand(register, accountName.Text, Int16.Parse(accountAge.Text), accountAddress.Text);
             var createAccountCommand = new CreateAccountCommand(register, emailTextBox.Text, passwordTextBox.Text);

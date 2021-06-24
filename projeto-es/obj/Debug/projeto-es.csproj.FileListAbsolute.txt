@@ -148,6 +148,6 @@ C:\Users\luisa\Documents\Universidade\Engenharia_Software\UMa_es_projeto_grupo\p
 C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.AdminForm.resources
 C:\Users\Asus\Source\Repos\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.AdminForm.resources
 C:\Users\Asus\Source\Repos\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.MainMenuStaff.resources
-C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.StaffMenuCreateAppointment.resources
 C:\Users\Asus\Source\Repos\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.StaffMenuCreatePrescription.resources
 C:\Users\luisa\Documents\Universidade\Engenharia_Software\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.StaffMenuCreateAppointment.resources
+C:\Users\a3gtr\OneDrive\Documents\GitHub\UMa_es_projeto_grupo\projeto-es\obj\Debug\projeto_es.Presentation_Layer.StaffMenuCreatePrescription.resources
