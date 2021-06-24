@@ -109,6 +109,7 @@
     <Compile Include="Business_Layer\AppointmentService.cs" />
     <Compile Include="Models\ClientAccount.cs" />
     <Compile Include="Business_Layer\ClientAccountService.cs" />
+    <Compile Include="Models\IRoleState.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\LoggedInSingleton.cs" />
     <Compile Include="Models\Person.cs" />
@@ -121,11 +122,23 @@
     <Compile Include="Presentation_Layer\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation_Layer\StaffMenuCreateAppointment.cs">
+    <Compile Include="Presentation_Layer\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation_Layer\StaffMenuCreateAppointment.Designer.cs">
-      <DependentUpon>StaffMenuCreateAppointment.cs</DependentUpon>
+    <Compile Include="Presentation_Layer\RegisterForm.designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\StaffMenuAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\StaffMenuAppointment.Designer.cs">
+      <DependentUpon>StaffMenuAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation_Layer\StaffMenuCreatePrescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation_Layer\StaffMenuCreatePrescription.Designer.cs">
+      <DependentUpon>StaffMenuCreatePrescription.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation_Layer\UserMenuCheckPrescriptionForm.cs">
       <SubType>Form</SubType>
@@ -189,17 +202,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Presentation_Layer\RegisterForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation_Layer\RegisterForm.Designer.cs">
-      <DependentUpon>RegisterForm.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Presentation_Layer\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation_Layer\StaffMenuCreateAppointment.resx">
-      <DependentUpon>StaffMenuCreateAppointment.cs</DependentUpon>
+    <EmbeddedResource Include="Presentation_Layer\RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\StaffMenuCreatePrescription.resx">
+      <DependentUpon>StaffMenuCreatePrescription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation_Layer\UserMenuCheckPrescriptionForm.resx">
       <DependentUpon>UserMenuCheckPrescriptionForm.cs</DependentUpon>
@@ -215,9 +225,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation_Layer\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation_Layer\RegisterForm.resx">
-      <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation_Layer\UserMenuAccountForm.resx">
       <DependentUpon>UserMenuAccountForm.cs</DependentUpon>

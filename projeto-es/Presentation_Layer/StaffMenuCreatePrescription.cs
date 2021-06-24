@@ -13,11 +13,11 @@ using System.Windows.Forms;
 
 namespace projeto_es.Presentation_Layer
 {
-    public partial class StaffMenuCreateAppointment : Form
+    public partial class StaffMenuCreatePrescription : Form
     {
         private string _nameUser;
         private static bool _control;
-        public StaffMenuCreateAppointment(string userName, CredentialsForm credencialsForm)
+        public StaffMenuCreatePrescription(string userName, CredentialsForm credencialsForm)
         {
             InitializeComponent();
             _control = false;
@@ -69,6 +69,11 @@ namespace projeto_es.Presentation_Layer
         }
 
         private void StaffMenuCreateAppointment_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void area_descrição_TextChanged(object sender, EventArgs e)
         {
 
         }

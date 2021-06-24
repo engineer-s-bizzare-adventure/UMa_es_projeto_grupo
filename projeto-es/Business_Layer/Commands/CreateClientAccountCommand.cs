@@ -12,7 +12,7 @@ namespace projeto_es.Business_Layer.Commands
         }
 
         public override void Execute() {
-            return _registerReceiver.CreateClientAccount();
+            //return _registerReceiver.CreateClientAccount();
         }
 
     }

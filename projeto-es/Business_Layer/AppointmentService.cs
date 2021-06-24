@@ -64,5 +64,17 @@ namespace projeto_es.Models
             List<Appointment> ListOffAppointments = (List<Appointment>)this._conn.Query<Appointment>(GetAppointmentsOfAClient);
             return ListOffAppointments;
         }
+
+
+        public List<Appointment> GetsAppointmentsOfAStaff(int AccountID)
+        {
+            string GetAppointmentsOfAClient = "SELECT `description`, appointment.id, scheduled_time " +
+                "FROM appointment, staffaccount, account " +
+                "WHERE appointment.StaffAccount_id = staffaccount.id && staffaccount.Account_id = account.id " +
+                $"&& account.id = {AccountID}";
+
+            List<Appointment> ListOffAppointments = (List<Appointment>)this._conn.Query<Appointment>(GetAppointmentsOfAClient);
+            return ListOffAppointments;
+        }
     }
 }
