@@ -92,9 +92,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business_Layer\IBuilderRegisterAccount.cs" />
+    <Compile Include="Business_Layer\Commands\CreateAccountCommand.cs" />
+    <Compile Include="Business_Layer\Commands\CreateClientAccountCommand.cs" />
     <Compile Include="Business_Layer\ItemService.cs" />
+    <Compile Include="Business_Layer\LoginFacade.cs" />
     <Compile Include="Business_Layer\PrescriptionService.cs" />
+    <Compile Include="Business_Layer\Commands\RegisterCommand.cs" />
+    <Compile Include="Business_Layer\Commands\RegisterInvoker.cs" />
+    <Compile Include="Business_Layer\Commands\RegisterPersonCommand.cs" />
+    <Compile Include="Business_Layer\Commands\RegisterReceiver.cs" />
     <Compile Include="DbContext.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Business_Layer\AccountService.cs" />
@@ -108,7 +114,6 @@
     <Compile Include="Models\Person.cs" />
     <Compile Include="Business_Layer\PersonService.cs" />
     <Compile Include="Models\Prescription.cs" />
-    <Compile Include="Models\Session.cs" />
     <Compile Include="Models\StaffAccount.cs" />
     <Compile Include="Presentation_Layer\AdminForm.cs">
       <SubType>Form</SubType>

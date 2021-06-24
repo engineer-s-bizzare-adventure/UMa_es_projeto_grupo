@@ -10,6 +10,8 @@ namespace projeto_es.Models
     {
         public static LoggedInSingleton instance = null;
         public int clientID = 0;
+        public int staffID = 0;
+        public int adminID = 0;
 
         private LoggedInSingleton(Account account = null, Person person = null)
         {

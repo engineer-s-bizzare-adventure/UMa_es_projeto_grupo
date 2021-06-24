@@ -23,6 +23,7 @@ namespace projeto_es.Models
             string sql = $"INSERT INTO `account`(`email`, `password`, `Person_id`) VALUES ('{account.Email}', '{account.Password}', LAST_INSERT_ID())";
             this._conn.Execute(sql);
         }
+
         public Account FetchAccount(string email, string password)
         {
             string QueryLogIN = $"SELECT `id`, `email`, `password` FROM `account` WHERE account.email ='{email}' AND account.password = '{password}'";
@@ -30,6 +31,7 @@ namespace projeto_es.Models
 
             return account;
         }
+
         public List<Person> GetAllStaffMembers()
         {
             string QueryGetAllStaffMembers = "SELECT * " +
@@ -53,6 +55,37 @@ namespace projeto_es.Models
 
             return StaffID;
         }
+
+        public int GetStaffMemberID(int accountID)
+        {
+            string QueryGetAdminMemberID = $"SELECT staffaccount.id FROM staffaccount, account WHERE staffaccount.Account_id = account.id && account.id = {accountID}";
+
+            int AdminID = this._conn.Query<int>(QueryGetAdminMemberID).FirstOrDefault();
+            return AdminID;
+        }
+
+        public int GetAdminMemberID(int accountID)
+        {
+            string QueryGetAdminMemberID = $"SELECT adminaccount.id FROM adminaccount, account WHERE adminaccount.Account_id = account.id && account.id = {accountID}";
+            
+            int AdminID = this._conn.Query<int>(QueryGetAdminMemberID).FirstOrDefault();
+            return AdminID;
+        }
+
+        public Person GetAdminDataFromAccount(string email)
+        {
+            string QueryAdminData = $"SELECT * FROM adminaccount, account, person WHERE adminaccount.Account_id = account.id && account.Person_id = person.id && account.email='{email}'";
+            var Person = this._conn.Query<Person>(QueryAdminData).FirstOrDefault();
+            return Person;
+        }
+
+        public Person GetStaffDataFromAccount(string email)
+        {
+            string QueryStaffData = $"SELECT * FROM staffaccount, account, person WHERE staffaccount.Account_id = account.id && account.Person_id = person.id && account.email= '{email}'";
+            var Person = this._conn.Query<Person>(QueryStaffData).FirstOrDefault();
+            return Person;
+        }
+
         public Person GetUserDataFromAccount(string email)
         {
             string QueryUserData = $"SELECT * FROM clientaccount, account, person WHERE clientaccount.Account_id = account.id && account.Person_id = person.id && account.email= '{email}'";

@@ -1,4 +1,5 @@
-﻿using projeto_es.Models;
+﻿using projeto_es.Business_Layer;
+using projeto_es.Models;
 using System;
 using System.Windows.Forms;
 
@@ -25,19 +26,20 @@ namespace projeto_es.Presentation_Layer
                 MessageBox.Show("Error logging in! Check details.");
                 return;
             }
-            // Pessoa 
-            Person personAssociatedToAccount = accountService.GetUserDataFromAccount(account.Email);
-            //Session accountSession = new Session(account, personAssociatedToAccount
-            LoggedSingleton.clientID = accountService.GetClientAccountId(account.Id);
-            LoggedSingleton.Account = account;
-            LoggedSingleton.Person = personAssociatedToAccount;
-                
+            else
+            {
+                LoginFacade login = new LoginFacade(LoggedSingleton);
+                login.Login(accountService, account, account.Email, account.Id);
+
+            }
+ 
             this.Hide();
             Form userMenuForm = new UserMenuForm(LoggedSingleton);
             userMenuForm.ShowDialog();
             this.DialogResult = DialogResult.OK;
         }
 
+        
         private void emailLabel_Click(object sender, EventArgs e)
         {
 
