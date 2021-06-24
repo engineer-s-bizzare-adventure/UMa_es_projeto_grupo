@@ -110,12 +110,10 @@
     <Compile Include="Models\Appointment.cs" />
     <Compile Include="Business_Layer\AppointmentService.cs" />
     <Compile Include="Models\ClientAccount.cs" />
-    <Compile Include="Business_Layer\ClientAccountService.cs" />
     <Compile Include="Business_Layer\ItemTemplate\ItemTemplateAbstract.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\LoggedInSingleton.cs" />
     <Compile Include="Models\Person.cs" />
-    <Compile Include="Business_Layer\PersonService.cs" />
     <Compile Include="Models\Prescription.cs" />
     <Compile Include="Models\StaffAccount.cs" />
     <Compile Include="Business_Layer\ItemTemplate\TreatmentTemplateConcrete.cs" />

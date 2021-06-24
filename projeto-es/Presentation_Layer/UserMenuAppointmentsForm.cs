@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using projeto_es.Business_Layer;
 using projeto_es.Models;
 
 namespace projeto_es.Presentation_Layer
@@ -16,7 +8,6 @@ namespace projeto_es.Presentation_Layer
     {
         public LoggedInSingleton LoggedSingleton { get; set; }
         AppointmentService appointmentService = new AppointmentService();
-        PrescriptionService prescriptionService = new PrescriptionService();
         public UserMenuAppointmentsForm(LoggedInSingleton loggedSingleton)
         {
             InitializeComponent();
