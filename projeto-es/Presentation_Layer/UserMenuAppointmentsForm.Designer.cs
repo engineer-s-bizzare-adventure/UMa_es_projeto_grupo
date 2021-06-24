@@ -51,6 +51,7 @@ namespace projeto_es.Presentation_Layer
             this.createPrescriptionButton.TabIndex = 0;
             this.createPrescriptionButton.Text = "Create an appointment";
             this.createPrescriptionButton.UseVisualStyleBackColor = true;
+            this.createPrescriptionButton.Visible = false;
             this.createPrescriptionButton.Click += new System.EventHandler(this.createPrescriptionButton_Click);
             // 
             // appointmentsLabel
@@ -129,6 +130,7 @@ namespace projeto_es.Presentation_Layer
             this.scheduledTimeListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.scheduledTimeListBox.Size = new System.Drawing.Size(120, 186);
             this.scheduledTimeListBox.TabIndex = 8;
+            this.scheduledTimeListBox.SelectedIndexChanged += new System.EventHandler(this.scheduledTimeListBox_SelectedIndexChanged);
             // 
             // errorLabel
             // 

@@ -35,6 +35,21 @@ namespace projeto_es.Models
 
         }
 
+
+        public bool CheckExistingAppointmentsStaff(LoggedInSingleton loggedSingleton)
+        {
+            string checkExistingAppointmentsOfStaffQuery = "SELECT `description` FROM `appointment`,`staffaccount` , `account` WHERE appointment.StaffAccount_id = staffaccount.id && staffaccount.Account_id = account.id && account.id = " + $"{loggedSingleton.Account.Id}";
+
+            var count = this._conn.Query(checkExistingAppointmentsOfStaffQuery);
+
+            if (count.Count() > 0)
+            {
+                return true;
+            }
+            return false;
+
+        }
+
         public void CreateAppointment(Appointment Appointment)
         {
 
@@ -68,13 +83,17 @@ namespace projeto_es.Models
 
         public List<Appointment> GetsAppointmentsOfAStaff(int AccountID)
         {
-            string GetAppointmentsOfAClient = "SELECT `description`, appointment.id, scheduled_time " +
+            string GetAppointmentsOfAStaff = "SELECT `description`, appointment.id, scheduled_time " +
                 "FROM appointment, staffaccount, account " +
                 "WHERE appointment.StaffAccount_id = staffaccount.id && staffaccount.Account_id = account.id " +
                 $"&& account.id = {AccountID}";
 
-            List<Appointment> ListOffAppointments = (List<Appointment>)this._conn.Query<Appointment>(GetAppointmentsOfAClient);
-            return ListOffAppointments;
+            List<Appointment> ListOffAppointmentsOfStaff = (List<Appointment>)this._conn.Query<Appointment>(GetAppointmentsOfAStaff);
+            return ListOffAppointmentsOfStaff;
         }
+        //public int getAppointmentIdPrescription(int PrescriptionId)
+        //{
+        //    int GetAppointmentId = 
+        //}
     }
 }

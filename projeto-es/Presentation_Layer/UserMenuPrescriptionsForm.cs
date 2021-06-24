@@ -38,7 +38,7 @@ namespace projeto_es.Presentation_Layer
         private void UserMenuPrescriptionsForm_Load(object sender, EventArgs e)
         {
             AccountService accountService = new AccountService();
-            var prescriptions = accountService.GetClientPrescriptions(LoggedSingleton.clientID);
+            var prescriptions = accountService.GetClientPrescriptionsOfStaff(LoggedSingleton.staffID);
 
             foreach (var prescription in prescriptions)
             {

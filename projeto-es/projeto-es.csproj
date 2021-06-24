@@ -208,6 +208,9 @@
     <EmbeddedResource Include="Presentation_Layer\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation_Layer\StaffMenuAppointment.resx">
+      <DependentUpon>StaffMenuAppointment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation_Layer\StaffMenuCreatePrescription.resx">
       <DependentUpon>StaffMenuCreatePrescription.cs</DependentUpon>
     </EmbeddedResource>

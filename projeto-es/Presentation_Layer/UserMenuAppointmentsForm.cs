@@ -37,10 +37,19 @@ namespace projeto_es.Presentation_Layer
         }
 
         private void UserMenuAppointmentsForm_Load(object sender, EventArgs e)
-        { 
-            
+        {
+
             var Appointments = appointmentService.GetsAppointmentsOfAClient(LoggedSingleton.Account.Id);
-            //appointmentsListBox.Items.Add("Name of Staff | scheduled time");
+            if (LoggedSingleton.Role == "Staff")
+            {
+                Appointments = appointmentService.GetsAppointmentsOfAStaff(LoggedSingleton.Account.Id);
+                
+            }
+            else
+            {
+                createPrescriptionButton.Visible = true;
+            }
+
             foreach (var Appointment in Appointments)
             {
                 
@@ -94,15 +103,10 @@ namespace projeto_es.Presentation_Layer
 
             var Appointments = appointmentService.GetsAppointmentsOfAClient(LoggedSingleton.Account.Id);
 
-            //if (LoggedSingleton.Role=="Staff")
-            //{
-            //     Appointments = appointmentService.GetsAppointmentsOfAStaff(LoggedSingleton.Account.Id);
-            //}
-            //else
-            //{
-            //    Appointments = appointmentService.GetsAppointmentsOfAClient(LoggedSingleton.Account.Id);
-            //}
-
+            if (LoggedSingleton.Role == "Staff")
+            {
+                Appointments = appointmentService.GetsAppointmentsOfAStaff(LoggedSingleton.Account.Id);
+            }
 
             foreach (var appointment in Appointments)
             {
@@ -151,11 +155,15 @@ namespace projeto_es.Presentation_Layer
             {
                 if (LoggedSingleton.Role=="Client")
                 {
-
+                    errorLabel.Text = "You Attended the appointment";
                 }
                 else
                 {
-
+                    LoggedSingleton.appointmentId = Convert.ToInt32(AppointmentIDlistBox.SelectedItem.ToString());
+                    this.Hide();
+                    Form StaffMenuAppointment = new StaffMenuAppointment(LoggedSingleton);
+                    StaffMenuAppointment.ShowDialog();
+                    this.Close();
                 }
             }
         }
@@ -179,5 +187,9 @@ namespace projeto_es.Presentation_Layer
 
         }
 
+        private void scheduledTimeListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
