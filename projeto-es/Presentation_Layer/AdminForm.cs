@@ -59,9 +59,19 @@ namespace projeto_es.Presentation_Layer
             var name = nameTextBox.Text;
             var prescriptionID = prescriptionTextBox.Text;
 
-            newExercise.addItem(Int32.Parse(prescriptionID),name, Int32.Parse(weight),session, Int32.Parse(treatTime), Int32.Parse(exerciseDur));
-            newMedicine.addItem(Int32.Parse(prescriptionID), name, Int32.Parse(weight), session, Int32.Parse(treatTime), Int32.Parse(exerciseDur));
-            newTreatment.addItem(Int32.Parse(prescriptionID), name, Int32.Parse(weight), session, Int32.Parse(treatTime), Int32.Parse(exerciseDur));
+            if(selectedType.SelectedItem.ToString() == "medicine")
+            {
+                newMedicine.addItem(Int32.Parse(prescriptionID), name, Int32.Parse(weight), session, Int32.Parse(treatTime), Int32.Parse(exerciseDur));
+
+            }
+            if (selectedType.SelectedItem.ToString() == "exercise")
+            {
+                newExercise.addItem(Int32.Parse(prescriptionID), name, Int32.Parse(weight), session, Int32.Parse(treatTime), Int32.Parse(exerciseDur));
+            }
+            if (selectedType.SelectedItem.ToString() == "treatment")
+            {
+                newTreatment.addItem(Int32.Parse(prescriptionID), name, Int32.Parse(weight), session, Int32.Parse(treatTime), Int32.Parse(exerciseDur));
+            }
         }
 
         private void AdminForm_Load(object sender, EventArgs e)

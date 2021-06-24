@@ -46,6 +46,8 @@ namespace projeto_es.Presentation_Layer
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.prescriptionIDLabel = new System.Windows.Forms.Label();
             this.prescriptionTextBox = new System.Windows.Forms.TextBox();
+            this.selectedType = new System.Windows.Forms.ListBox();
+            this.selectType = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // checkPrescriptionHistory
@@ -90,7 +92,7 @@ namespace projeto_es.Presentation_Layer
             // 
             // addItem
             // 
-            this.addItem.Location = new System.Drawing.Point(144, 102);
+            this.addItem.Location = new System.Drawing.Point(131, 54);
             this.addItem.Name = "addItem";
             this.addItem.Size = new System.Drawing.Size(123, 23);
             this.addItem.TabIndex = 6;
@@ -100,28 +102,28 @@ namespace projeto_es.Presentation_Layer
             // 
             // weightTextBox
             // 
-            this.weightTextBox.Location = new System.Drawing.Point(154, 131);
+            this.weightTextBox.Location = new System.Drawing.Point(141, 83);
             this.weightTextBox.Name = "weightTextBox";
             this.weightTextBox.Size = new System.Drawing.Size(100, 20);
             this.weightTextBox.TabIndex = 7;
             // 
             // sessionTextBox
             // 
-            this.sessionTextBox.Location = new System.Drawing.Point(154, 160);
+            this.sessionTextBox.Location = new System.Drawing.Point(141, 112);
             this.sessionTextBox.Name = "sessionTextBox";
             this.sessionTextBox.Size = new System.Drawing.Size(100, 20);
             this.sessionTextBox.TabIndex = 8;
             // 
             // treatTimeTextBox
             // 
-            this.treatTimeTextBox.Location = new System.Drawing.Point(154, 189);
+            this.treatTimeTextBox.Location = new System.Drawing.Point(141, 141);
             this.treatTimeTextBox.Name = "treatTimeTextBox";
             this.treatTimeTextBox.Size = new System.Drawing.Size(100, 20);
             this.treatTimeTextBox.TabIndex = 9;
             // 
             // exerciseDurTextBox
             // 
-            this.exerciseDurTextBox.Location = new System.Drawing.Point(154, 217);
+            this.exerciseDurTextBox.Location = new System.Drawing.Point(141, 169);
             this.exerciseDurTextBox.Name = "exerciseDurTextBox";
             this.exerciseDurTextBox.Size = new System.Drawing.Size(100, 20);
             this.exerciseDurTextBox.TabIndex = 10;
@@ -129,7 +131,7 @@ namespace projeto_es.Presentation_Layer
             // weightLabel
             // 
             this.weightLabel.AutoSize = true;
-            this.weightLabel.Location = new System.Drawing.Point(97, 134);
+            this.weightLabel.Location = new System.Drawing.Point(84, 86);
             this.weightLabel.Name = "weightLabel";
             this.weightLabel.Size = new System.Drawing.Size(44, 13);
             this.weightLabel.TabIndex = 11;
@@ -138,7 +140,7 @@ namespace projeto_es.Presentation_Layer
             // sessionLabel
             // 
             this.sessionLabel.AutoSize = true;
-            this.sessionLabel.Location = new System.Drawing.Point(94, 167);
+            this.sessionLabel.Location = new System.Drawing.Point(81, 119);
             this.sessionLabel.Name = "sessionLabel";
             this.sessionLabel.Size = new System.Drawing.Size(47, 13);
             this.sessionLabel.TabIndex = 12;
@@ -147,7 +149,7 @@ namespace projeto_es.Presentation_Layer
             // treatmentLabel
             // 
             this.treatmentLabel.AutoSize = true;
-            this.treatmentLabel.Location = new System.Drawing.Point(57, 196);
+            this.treatmentLabel.Location = new System.Drawing.Point(44, 148);
             this.treatmentLabel.Name = "treatmentLabel";
             this.treatmentLabel.Size = new System.Drawing.Size(84, 13);
             this.treatmentLabel.TabIndex = 13;
@@ -156,7 +158,7 @@ namespace projeto_es.Presentation_Layer
             // exerciseDurationLabel
             // 
             this.exerciseDurationLabel.AutoSize = true;
-            this.exerciseDurationLabel.Location = new System.Drawing.Point(48, 224);
+            this.exerciseDurationLabel.Location = new System.Drawing.Point(35, 176);
             this.exerciseDurationLabel.Name = "exerciseDurationLabel";
             this.exerciseDurationLabel.Size = new System.Drawing.Size(93, 13);
             this.exerciseDurationLabel.TabIndex = 14;
@@ -165,7 +167,7 @@ namespace projeto_es.Presentation_Layer
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(103, 250);
+            this.nameLabel.Location = new System.Drawing.Point(90, 202);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(38, 13);
             this.nameLabel.TabIndex = 16;
@@ -173,7 +175,7 @@ namespace projeto_es.Presentation_Layer
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Location = new System.Drawing.Point(154, 243);
+            this.nameTextBox.Location = new System.Drawing.Point(141, 195);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(100, 20);
             this.nameTextBox.TabIndex = 15;
@@ -181,7 +183,7 @@ namespace projeto_es.Presentation_Layer
             // prescriptionIDLabel
             // 
             this.prescriptionIDLabel.AutoSize = true;
-            this.prescriptionIDLabel.Location = new System.Drawing.Point(62, 276);
+            this.prescriptionIDLabel.Location = new System.Drawing.Point(49, 228);
             this.prescriptionIDLabel.Name = "prescriptionIDLabel";
             this.prescriptionIDLabel.Size = new System.Drawing.Size(79, 13);
             this.prescriptionIDLabel.TabIndex = 18;
@@ -189,16 +191,39 @@ namespace projeto_es.Presentation_Layer
             // 
             // prescriptionTextBox
             // 
-            this.prescriptionTextBox.Location = new System.Drawing.Point(154, 269);
+            this.prescriptionTextBox.Location = new System.Drawing.Point(141, 221);
             this.prescriptionTextBox.Name = "prescriptionTextBox";
             this.prescriptionTextBox.Size = new System.Drawing.Size(100, 20);
             this.prescriptionTextBox.TabIndex = 17;
+            // 
+            // selectedType
+            // 
+            this.selectedType.FormattingEnabled = true;
+            this.selectedType.Items.AddRange(new object[] {
+            "medicine",
+            "treatment",
+            "exercise"});
+            this.selectedType.Location = new System.Drawing.Point(141, 247);
+            this.selectedType.Name = "selectedType";
+            this.selectedType.Size = new System.Drawing.Size(120, 43);
+            this.selectedType.TabIndex = 19;
+            // 
+            // selectType
+            // 
+            this.selectType.AutoSize = true;
+            this.selectType.Location = new System.Drawing.Point(61, 261);
+            this.selectType.Name = "selectType";
+            this.selectType.Size = new System.Drawing.Size(67, 13);
+            this.selectType.TabIndex = 20;
+            this.selectType.Text = "Select Type:";
             // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(388, 322);
+            this.Controls.Add(this.selectType);
+            this.Controls.Add(this.selectedType);
             this.Controls.Add(this.prescriptionIDLabel);
             this.Controls.Add(this.prescriptionTextBox);
             this.Controls.Add(this.nameLabel);
@@ -242,5 +267,7 @@ namespace projeto_es.Presentation_Layer
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Label prescriptionIDLabel;
         private System.Windows.Forms.TextBox prescriptionTextBox;
+        private System.Windows.Forms.ListBox selectedType;
+        private System.Windows.Forms.Label selectType;
     }
 }

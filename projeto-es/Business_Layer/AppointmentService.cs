@@ -57,7 +57,6 @@ namespace projeto_es.Models
                                             "(`date`, `description`, `scheduled_time`, `StaffAccount_id`, `ClientAccount_id`) " +
                                             $"VALUES('{Appointment.date}', '{Appointment.description}', '{Appointment.scheduled_time}', {Appointment.StaffAccountId}, {Appointment.ClientAccountId})";
             this._conn.Execute(createAppointmentQuery);
-            //SELECT * FROM `staffaccount`, `account`, `person` WHERE staffaccount.Account_id = account.id && account.Person_id = person.id
         }
 
         public void DeleteAppointment(uint id)
@@ -91,9 +90,5 @@ namespace projeto_es.Models
             List<Appointment> ListOffAppointmentsOfStaff = (List<Appointment>)this._conn.Query<Appointment>(GetAppointmentsOfAStaff);
             return ListOffAppointmentsOfStaff;
         }
-        //public int getAppointmentIdPrescription(int PrescriptionId)
-        //{
-        //    int GetAppointmentId = 
-        //}
     }
 }

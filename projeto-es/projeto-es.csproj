@@ -105,20 +105,20 @@
     <Compile Include="Models\Account.cs" />
     <Compile Include="Business_Layer\AccountService.cs" />
     <Compile Include="Models\AdminAccount.cs" />
-    <Compile Include="Business_Layer\AdminItemTemplate\ExerciseTemplateConcrete.cs" />
-    <Compile Include="Business_Layer\AdminItemTemplate\MedicineTemplateConcrete.cs" />
+    <Compile Include="Business_Layer\ItemTemplate\ExerciseTemplateConcrete.cs" />
+    <Compile Include="Business_Layer\ItemTemplate\MedicineTemplateConcrete.cs" />
     <Compile Include="Models\Appointment.cs" />
     <Compile Include="Business_Layer\AppointmentService.cs" />
     <Compile Include="Models\ClientAccount.cs" />
     <Compile Include="Business_Layer\ClientAccountService.cs" />
-    <Compile Include="Business_Layer\AdminItemTemplate\ItemTemplateAbstract.cs" />
+    <Compile Include="Business_Layer\ItemTemplate\ItemTemplateAbstract.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\LoggedInSingleton.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Business_Layer\PersonService.cs" />
     <Compile Include="Models\Prescription.cs" />
     <Compile Include="Models\StaffAccount.cs" />
-    <Compile Include="Business_Layer\AdminItemTemplate\TreatmentTemplateConcrete.cs" />
+    <Compile Include="Business_Layer\ItemTemplate\TreatmentTemplateConcrete.cs" />
     <Compile Include="Presentation_Layer\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>

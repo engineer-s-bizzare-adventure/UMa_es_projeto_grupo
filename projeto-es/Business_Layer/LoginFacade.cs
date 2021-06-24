@@ -19,22 +19,14 @@ namespace projeto_es.Business_Layer
 
         public void Login(AccountService accountService, Account account, string email, int id)
         {
-
-            //User 
             Person personAssociatedToAccount = accountService.GetUserDataFromAccount(email);
             LoggedSingleton.clientID = accountService.GetClientAccountId(id);
 
-
-            //Staff
             Person staffAssociatedToAccount = accountService.GetStaffDataFromAccount(email);
             LoggedSingleton.staffID = accountService.GetStaffMemberID(id);
 
-
-            //Admin
             Person adminAssociatedToAccount = accountService.GetAdminDataFromAccount(email);
             LoggedSingleton.adminID = accountService.GetAdminMemberID(id);
-
-
 
             atributeSession(personAssociatedToAccount, staffAssociatedToAccount, adminAssociatedToAccount , account);
         }
@@ -59,7 +51,7 @@ namespace projeto_es.Business_Layer
             {
                 LoggedSingleton.Account = account;
                 LoggedSingleton.Person = personAssociatedToAccount;
-                LoggedSingleton.Role = "Cliente";
+                LoggedSingleton.Role = "Client";
             }
         }
     }

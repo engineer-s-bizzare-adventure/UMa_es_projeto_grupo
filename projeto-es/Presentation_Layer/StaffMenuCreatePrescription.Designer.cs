@@ -44,7 +44,7 @@ namespace projeto_es.Presentation_Layer
             // 
             // area_descrição
             // 
-            this.area_descrição.Location = new System.Drawing.Point(139, 154);
+            this.area_descrição.Location = new System.Drawing.Point(157, 97);
             this.area_descrição.Name = "area_descrição";
             this.area_descrição.Size = new System.Drawing.Size(580, 192);
             this.area_descrição.TabIndex = 3;
@@ -55,7 +55,7 @@ namespace projeto_es.Presentation_Layer
             // 
             this.label_description.AutoSize = true;
             this.label_description.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label_description.Location = new System.Drawing.Point(61, 157);
+            this.label_description.Location = new System.Drawing.Point(79, 100);
             this.label_description.Name = "label_description";
             this.label_description.Size = new System.Drawing.Size(60, 13);
             this.label_description.TabIndex = 1;
@@ -65,7 +65,7 @@ namespace projeto_es.Presentation_Layer
             // 
             this.label_name_utente.AutoSize = true;
             this.label_name_utente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label_name_utente.Location = new System.Drawing.Point(26, 114);
+            this.label_name_utente.Location = new System.Drawing.Point(44, 57);
             this.label_name_utente.Name = "label_name_utente";
             this.label_name_utente.Size = new System.Drawing.Size(104, 13);
             this.label_name_utente.TabIndex = 0;
@@ -76,7 +76,7 @@ namespace projeto_es.Presentation_Layer
             // 
             this.tb_name_utente.AccessibleName = "Nome Completo";
             this.tb_name_utente.ForeColor = System.Drawing.Color.Black;
-            this.tb_name_utente.Location = new System.Drawing.Point(139, 114);
+            this.tb_name_utente.Location = new System.Drawing.Point(157, 57);
             this.tb_name_utente.Name = "tb_name_utente";
             this.tb_name_utente.Size = new System.Drawing.Size(580, 20);
             this.tb_name_utente.TabIndex = 9;
@@ -86,7 +86,7 @@ namespace projeto_es.Presentation_Layer
             // btn_confirm_prescription
             // 
             this.btn_confirm_prescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btn_confirm_prescription.Location = new System.Drawing.Point(567, 380);
+            this.btn_confirm_prescription.Location = new System.Drawing.Point(585, 402);
             this.btn_confirm_prescription.Name = "btn_confirm_prescription";
             this.btn_confirm_prescription.Size = new System.Drawing.Size(152, 36);
             this.btn_confirm_prescription.TabIndex = 9;
