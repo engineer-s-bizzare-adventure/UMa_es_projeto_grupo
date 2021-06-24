@@ -109,5 +109,12 @@ namespace projeto_es.Models
 
             return prescriptions;
         }
+        public List<Prescription> GetClientPrescriptionsOfStaff(int StaffAccountID)
+        {
+            string QueryPrescriptions = $"SELECT prescription.id, prescription.name, prescription.description, prescription.date_prescribed FROM prescription, appointment WHERE prescription.Appointment_id = appointment.id AND appointment.StaffAccount_id = {StaffAccountID}";
+            List<Prescription> prescriptions = (List<Prescription>)this._conn.Query<Prescription>(QueryPrescriptions);
+
+            return prescriptions;
+        }
     }
 }

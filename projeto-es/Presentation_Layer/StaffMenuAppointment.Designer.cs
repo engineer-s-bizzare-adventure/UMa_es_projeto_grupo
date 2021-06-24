@@ -118,6 +118,7 @@ namespace projeto_es.Presentation_Layer
             this.Controls.Add(this.PrescriptionsListbox);
             this.Name = "StaffMenuAppointment";
             this.Text = "StaffMenuAppointment";
+            this.Load += new System.EventHandler(this.StaffMenuAppointment_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

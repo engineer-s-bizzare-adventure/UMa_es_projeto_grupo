@@ -20,10 +20,20 @@ namespace projeto_es.Presentation_Layer
             InitializeComponent();
             LoggedSingleton = loggedSingleton;
         }
+        private void StaffMenuAppointment_Load(object sender, EventArgs e)
+        {
+            AccountService accountService = new AccountService();
+            var prescriptions = accountService.GetClientPrescriptionsOfStaff(LoggedSingleton.staffID);
+
+            foreach (var prescription in prescriptions)
+            {
+                PrescriptionsListbox.Items.Add(prescription.Name + " " + prescription.Description + " " + prescription.DatePrescribed);
+                prescriptionIDlistbox.Items.Add(prescription.Id);
+            }
+        }
 
         private void PrescriptionsListbox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void prescriptionIDlistbox_SelectedIndexChanged(object sender, EventArgs e)
