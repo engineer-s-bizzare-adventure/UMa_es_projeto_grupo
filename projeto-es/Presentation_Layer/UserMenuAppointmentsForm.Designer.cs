@@ -130,6 +130,7 @@ namespace projeto_es.Presentation_Layer
             this.scheduledTimeListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.scheduledTimeListBox.Size = new System.Drawing.Size(120, 186);
             this.scheduledTimeListBox.TabIndex = 8;
+            this.scheduledTimeListBox.SelectedIndexChanged += new System.EventHandler(this.scheduledTimeListBox_SelectedIndexChanged);
             // 
             // errorLabel
             // 

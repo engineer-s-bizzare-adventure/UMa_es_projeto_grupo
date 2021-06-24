@@ -1,4 +1,6 @@
-﻿using System;
+﻿using projeto_es.Business_Layer;
+using projeto_es.Models;
+using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,65 +17,55 @@ namespace projeto_es.Presentation_Layer
 {
     public partial class StaffMenuCreatePrescription : Form
     {
-        private string _nameUser;
-        private static bool _control;
-        public StaffMenuCreatePrescription(string userName, CredentialsForm credencialsForm)
+        public LoggedInSingleton LoggedSingleton { get; set; }
+        public int AppointmentID { get; }
+
+        public StaffMenuCreatePrescription(LoggedInSingleton loggedSingleton)
         {
             InitializeComponent();
-            _control = false;
+            LoggedSingleton = loggedSingleton;
+            //AppointmentID = appointmentID;
         }
 
         private void btn_close(object sender, FormClosingEventArgs e)
         {
-            if (!_control)
-            {
-                var question = MessageBox.Show($@"{_nameUser}, deseja sair da aplicação", @"Saíndo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (question == DialogResult.Yes)
-                {
-                    _control = true;
-                    Application.Exit();
-                }
-                else
-                {
-                    e.Cancel = true;
-                }
-            }
+            this.DialogResult = DialogResult.OK;
         }
 
-        private void btn_back_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void btn_confirm_prescription_Click(object sender, EventArgs e)
         {
-            /*
-             * Envio de informaçõa para a base de dados
-             */
-            if (!RB_Medican.Checked && !RB_exercise.Checked && !RB_treatment.Checked ||
-                tb_name_utente.Text.ToLower() == "nome completo" ||
-                area_descrição.Text.ToLower() == "descrição da prescrição")
+            DateTime localDate = DateTime.Now;
+            PrescriptionService prescriptionService = new PrescriptionService();
+            prescriptionService.CreatePrescription(new Prescription()
             {
-                MessageBox.Show("Falta inserir algumas informações", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                pnl_prescription.Visible = false;
-                btn_back.Visible = false;
-            }
+                Name = tb_name_utente.Text,
+                Description = area_descrição.Text,
+                DatePrescribed = localDate.ToString(),
+                Appointment_Id = (uint)LoggedSingleton.appointmentId,
+
+            });
+            this.Close();
+
         }
 
-        private void tb_name_utente_TextChanged(object sender, EventArgs e)
-        {
-            tb_name_utente.Text = "";
-        }
 
         private void StaffMenuCreateAppointment_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void area_descrição_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_name_utente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_name_utente_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -91,5 +91,9 @@ namespace projeto_es.Models
             List<Appointment> ListOffAppointmentsOfStaff = (List<Appointment>)this._conn.Query<Appointment>(GetAppointmentsOfAStaff);
             return ListOffAppointmentsOfStaff;
         }
+        //public int getAppointmentIdPrescription(int PrescriptionId)
+        //{
+        //    int GetAppointmentId = 
+        //}
     }
 }

@@ -29,7 +29,7 @@ namespace projeto_es.Business_Layer
         public void CreatePrescription(Prescription prescription)
         {
             string QueryCreatePrescription = "INSERT INTO `prescription`(`name`, `description`, `date_prescribed`, `Appointment_id`) " +
-                                             $"VALUES ({prescription.Name},{prescription.Description},{prescription.DatePrescribed},{prescription.Appointment_Id});";
+                                             $"VALUES ('{prescription.Name}','{prescription.Description}','{prescription.DatePrescribed}',{prescription.Appointment_Id});";
             this._conn.Execute(QueryCreatePrescription);
         }
     }

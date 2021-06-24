@@ -50,10 +50,6 @@ namespace projeto_es.Presentation_Layer
                 createPrescriptionButton.Visible = true;
             }
 
-           
-            Console.WriteLine("LoggedSingleton.Account.Id = " + LoggedSingleton.Account.Id);
-            Console.WriteLine("role = " +LoggedSingleton.Role);
-            Console.WriteLine("id = " + LoggedSingleton.staffID);
             foreach (var Appointment in Appointments)
             {
                 
@@ -163,6 +159,7 @@ namespace projeto_es.Presentation_Layer
                 }
                 else
                 {
+                    LoggedSingleton.appointmentId = Convert.ToInt32(AppointmentIDlistBox.SelectedItem.ToString());
                     this.Hide();
                     Form StaffMenuAppointment = new StaffMenuAppointment(LoggedSingleton);
                     StaffMenuAppointment.ShowDialog();
@@ -190,5 +187,9 @@ namespace projeto_es.Presentation_Layer
 
         }
 
+        private void scheduledTimeListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
